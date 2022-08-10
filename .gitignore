@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+*.x
+
+# tex shit
+*.log
+*.synctex.gz
