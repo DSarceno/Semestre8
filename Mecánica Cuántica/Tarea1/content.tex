@@ -1,0 +1,88 @@
+\begin{ejercicio}
+	 Teniendo las definiciones de los operadores de creación y aniquilación 
+	$$
+		\left.\begin{array}{ccc}
+			a\ket{n} & = & \sqrt{n} \ket{n - 1} \\
+			a^\dagger \ket{n} & = & \sqrt{n + 1} \ket{n + 1} \\
+		\end{array}\right\}
+		\Rightarrow \left\{\begin{array}{ccc}
+			a^2 \ket{n} & = & \sqrt{n(n - 1)} \ket{n - 2} \\
+			a^{\dagger ^{2}} \ket{n} & = & \sqrt{(n + 1)(n + 2)} \ket{n + 2} 
+		\end{array}\right. .
+	$$
+	Calulamos los operadores $X$ y $P$ en términos de $a$ y $a^\dagger$
+	\begin{align*}
+		X &= \sqrt{\frac{\hbar}{2m\omega}} \qty(a^\dagger + a) \\
+		P &= m\omega i \sqrt{\frac{\hbar}{2m\omega}} \qty(a^\dagger - a) \\
+		X^2 &= \frac{\hbar}{2m\omega} \qty(a^{\dagger ^{2}} + a^\dagger a + aa^\dagger + a^2) \\
+		P^2 &= -\qty(\frac{m\omega \hbar}{2})^2 \qty(a^{\dagger ^{2}} + a^2 - a^\dagger a - aa^\dagger) .
+	\end{align*}
+	Encontrando
+	\begin{align*}
+		\mel{m}{X}{n} &= \mel{m}{\sqrt{\frac{\hbar}{2m\omega}} \qty(a^\dagger + a)}{n} \\
+			&= \sqrt{\frac{\hbar}{2m\omega}} \qty(\sqrt{n + 1} \braket{m}{n + 1} + \sqrt{n} \braket{m}{n - 1}) \\
+			\Aboxed{ &= \sqrt{\frac{\hbar}{2m\omega}} \qty(\sqrt{n + 1} \delta_{m,n + 1} + \sqrt{n} \delta_{m,n - 1})}
+	\end{align*}
+	bajo la misma idea
+	\begin{align*}
+		\Aboxed{ \mel{m}{P}{n} &= \sqrt{\frac{\hbar m \omega}{2}} i \qty( \sqrt{n + 1} \delta_{m,n + 1} - \sqrt{n} \delta_{m,n - 1} ) }.
+	\end{align*}
+	\begin{align*}
+		\mel{m}{X^2}{n} &= \frac{\hbar}{2m\omega} \bra{m} \qty[\sqrt{(n + 1)(n + 2)} \ket{n + 2} + \sqrt{n(n - 1)} \ket{n - 2} + n\ket{n} + (n + 1)\ket{n}] \\
+		\Aboxed{ &= \frac{\hbar}{2m\omega} \qty(\sqrt{(n + 1)(n + 2)} \delta_{m,n + 2} + \sqrt{n(n - 1)} \delta_{m,n - 2} + n\delta_{m,n} + (n + 1)\delta_{m,n}) }
+	\end{align*}
+	\begin{align*}
+		\Aboxed{ \mel{m}{P^2}{n} &= -\frac{m\omega \hbar}{2} \qty( \sqrt{(n + 1)(n + 2)}\delta_{m,n + 2} + \sqrt{n(n - 1)} \delta_{m,n - 2} - n\delta_{m,n} - (n + 1) \delta_{m,n} ) }
+	\end{align*}
+	Encontrando $XP$ y $PX$, se tiene
+	$$ XP = \frac{\hbar}{2} i \qty( \sqrt{(n + 1)(n + 2)} \delta _{m,n + 2} - n\delta _{m,n} + (n + 1) \delta _{m,n + 1} - \sqrt{n(n - 1)} \delta _{m,n - 2} ), $$
+	$$ PX = \frac{\hbar}{2} i \qty( \sqrt{(n + 1)(n + 2)} \delta _{m,n + 2} + n\delta _{m,n} - (n + 1) \delta _{m,n + 1} - \sqrt{n(n - 1)} \delta _{m,n - 2} ). $$
+	entonces
+	$$ \boxed{\mel{m}{XP + PX}{n} = \hbar i \qty(\sqrt{(n + 1)(n + 2)} \delta _{m,n + 2} - \sqrt{n(n - 1)} \delta _{m,n - 2}).} $$
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	 
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	 
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	 
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	 
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	 
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%
