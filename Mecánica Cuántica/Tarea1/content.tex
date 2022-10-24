@@ -45,35 +45,74 @@
 
 
 \begin{ejercicio}
-	 
+	 Teniendo el estado inicial
+	 	$$ \ket{\psi _o} = \sum _{n = 0} ^\infty c_n \ket{n}, $$
+	 para encontrar en todo instante $t$
+	 	$$ \ket{\psi _(t)} = U(t) \ket{\psi _o}, \qquad \qquad U(t) = e^{-\frac{it}{\hbar} H}. $$
+	 Sabiendo que $e^{-\frac{it}{\hbar} H} \ket{n} = e^{-i\omega (n + 1/2) t} \ket{n} $, entonces
+	 	$$ \ket{\psi (t)} = \sum _{n = 0} ^\infty c_n e^{-i\omega (n + 1/2) t} \ket{n} = \sum _{n = 0} ^\infty c_n e^{-i\omega n t} \ket{n} $$
+	 podemos eliminar el término $e^{-i\frac{\omega}{2} t}$ dado que no afecta a la representación del estado.
+	 	$$ \Psi (x,t) = \braket{x}{\psi (t)} = \sum _{n = 0} ^\infty c_n e^{-i\omega n t} \underbrace{\braket{x}{n}}_{\phi _n (x)}. $$
 \end{ejercicio}
 
 
 
 
 \begin{ejercicio}
-	 
+	 Teniendo el operador $X = \sqrt{\frac{\hbar}{2m\omega}} (a^\dagger + a)$. Multiplicando por si mismo
+	 	$$ X^2 = \frac{\hbar}{2m\omega} \underbrace{(a^\dagger + a)(a^\dagger + a)}_{a^{\dagger ^2} + a^2 + a^\dagger a + aa^\dagger}, $$
+	 	$$ X^2 = \frac{\hbar}{2m\omega} \qty(a^{\dagger ^2} + a^2 + a^\dagger a + aa^\dagger). $$
 \end{ejercicio}
 
 
 
 
 \begin{ejercicio}
-	 
+	 Teniendo los operadores
+	 	$$
+		\begin{array}{c}
+			X^2 = \frac{\hbar}{2m\omega} \qty(a^{\dagger ^2} + a^2 + a^\dagger a + aa^\dagger) \\
+			P^2 = -\frac{m\hbar \omega}{2} \qty(a^{\dagger ^2} + a^2 - a^\dagger a - aa^\dagger) \\
+			H = \hbar \omega \qty(a^\dagger a + \frac{1}{2}).
+		\end{array}			 	
+	 	$$
+	 y teniendo que $\expval{a^2}{n} = \expval{a^{\dagger ^2}}{n} = 0$, $\expval{a^\dagger a}{n} = n$ y $\expval{aa^\dagger}{n} = n + 1$. Entonces
+	 	$$ \expval{X^2} = \frac{\hbar}{2m\omega} (2n + 1), $$
+	 	$$ \expval{P^2} = \frac{m\hbar \omega}{2} (2n + 1), $$
+	 	$$ \expval{H} = \hbar \omega \qty(n + \frac{1}{2}). $$
+	 Valuando para el estado base ($n = 0$) se tiene
+	 	$$ \expval{X^2} = \frac{\hbar}{2m\omega}, $$
+	 	$$ \expval{P^2} = \frac{m\hbar \omega}{2}, $$
+	 	$$ \expval{H} = \frac{\hbar \omega}{2}. $$
+	 $\hfill \square$
 \end{ejercicio}
 
 
 
 
 \begin{ejercicio}
-	 
+	 Teniendo la energía para el oscilador cuántico $E_n = \hbar \omega \qty(n + \frac{1}{2})$, tomando la energía del oscilador armónico $E = \frac{1}{2} kA^2$. Entonces, en términos de $\omega$
+	 	$$ A_n = \sqrt{\frac{\hbar (2n + 1)}{m \omega}}. $$
+	 El parámetro $\lambda$ es
+	 	$$ \lambda = \sqrt{\frac{\hbar}{m\omega}}. $$
+	 La probabilidad fuera del límite clásico es
+	 	$$ P_{out} = 1 - P_{in} \qquad \Rightarrow \qquad P_{out} = 1 - \int _{-A_0} ^{A_0} \abs{\psi _0 (x)} \dd{x}, $$
+	 para el estado base se tiene
+	 	$$ \psi _0 (x) = \qty(\frac{m\omega}{\pi \hbar})^{\flatfrac{1}{4}} e^{-\frac{m\omega x^2}{2\hbar}}; $$
+	 por lo tanto
+	 	$$ P_{out} = 1 - \qty(\frac{m\omega}{\pi \hbar})^{\flatfrac{1}{2}} \int _{-A_0} ^{A_0} e^{-\frac{m\omega x^2}{\hbar}} \dd{x} \qquad \Rightarrow \qquad P_{out} = 1 -\erf{1} = 15.73\%. $$
 \end{ejercicio}
 
 
 
 
 \begin{ejercicio}
-	 
+	 Dado lo encontrado el ejercicio anterior, encontramos la amplitud para el estado $\ket{1}$ y la probabilidad fuera del límite clásico.
+	 	$$ A_1 = \sqrt{\frac{3\hbar}{m\omega}}, $$
+	 la función de onda es
+	 	$$ \psi _1 (x) = \frac{\sqrt{2}}{\pi ^{\frac{1}{4}}} \qty(\frac{m\omega}{\hbar})^{\flatfrac{3}{4}} x e^{-\frac{m\omega x^2}{2\hbar}}. $$
+	 Integrando
+	 	$$ P_{out} = 1 - \frac{2}{\sqrt{\pi}} \qty(\frac{m\omega}{\hbar})^{\flatfrac{3}{2}} \int _{-A_1} ^{A_1} x^2 e^{-\frac{m\omega x^2}{\hbar}} \dd{x} = P_{out} = 1 - \qty(\text{erf}\left(\sqrt{3}\right)-2 \sqrt{\frac{3}{\pi }} e^{-3}) = 11.16\%. $$
 \end{ejercicio}
 
 

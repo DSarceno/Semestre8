@@ -1,0 +1,76 @@
+\begin{ejercicio}
+	Solución: Para el estado
+		$$ \ket{S_n +} = \frac{\sqrt{3}}{2} \ket{+} + \frac{i}{2} \ket{-}. $$
+	\begin{enumerate}[a)]
+		\item 
+		\item 
+		\item La probabilidad de medir $\frac{\hbar}{2}$ en $x$ para el estado mostrado $\ket{S_n +}$, 
+			$$ \frac{\abs{\braket{\psi _n}{\psi}}^2}{\braket{\psi _n} \braket{\psi}} = \frac{1}{2} = 50\% . $$
+			Donde $\ket{\psi _n}$ es el vector propio del valor propio $\frac{\hbar}{2}$ del operador $S_x$. Utilizamos las funciones que creamos el semestre pasado, en mi caso \texttt{GeneralProbability[$S_x$, $\ket{S_n +}$, $\flatfrac{\hbar}{2}$]}.
+		\item Realizamos lo mismo que en en el ejercicio anterior, \texttt{GeneralProbability[$S_y$, $\ket{S_n +}$, $-\flatfrac{\hbar}{2}$]}. Lo que nos da
+			$$ P = 0.933 = 93.3\% . $$
+		\item 
+		\item Teniendo $\ket{\psi _o} = \ket{S_n +}$ y el operador evolución $U(t) = e^{-\frac{it}{\hbar} H} = e^{-\frac{it}{\hbar} \omega S_z}$. Aplicando $\ket{\psi (t)} = U(t) \ket{\psi _o}$, entonces
+			$$ \ket{\psi (t)} = \frac{\sqrt{3}}{2} e^{-\frac{it}{\hbar} \omega S_z} \ket{+} + \frac{i}{2} e^{-\frac{it}{\hbar} \omega S_z} \ket{-} = \frac{\sqrt{3}}{2} e^{-\frac{i\omega t}{2}} \ket{+} + \frac{i}{2} e^{\frac{i\omega t}{2}} \ket{-}. $$
+		\item Con el resultado anterior, valuamos en un tiempo $t = \flatfrac{\pi}{\omega}$.
+			$$ \ket{\psi (\frac{\pi}{\omega})} = -\frac{i\sqrt{3}}{2} \ket{+} - \frac{1}{2} \ket{-}. $$ 
+	\end{enumerate}
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	Solución: 
+	\begin{enumerate}[a)]
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{enumerate}
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	Sabiendo que para las matrices de pauli se cumple que
+		$$ [\pauli{j} ,\pauli{k}] = 2i\varepsilon _{jkl} \pauli{l}, $$
+	donde $\varepsilon_{jkl}$ es el tensor de Levi$-$Civita. Entonces, sabiendo que los operadores en cada eje están definidos como $S_x = \frac{\hbar}{2} \pauli{x}$, $S_y = \frac{\hbar}{2} \pauli{y}$ y $S_z = \frac{\hbar}{2} \pauli{z}$, entonces, reemplazando valores y utilizando la función \texttt{LeviCivitaTensor[3]} para encontrar los respectivos valores del mismo.
+		$$ [S_x,S_z] = 2\qty(\frac{\hbar ^2}{4}) i \varepsilon_{xzy} \pauli{y} = \mqty(0 & -\frac{\hbar ^2}{2} \\ \frac{\hbar ^2}{2} & 0), $$
+		$$ [S_y,S_z] = 2\qty(\frac{\hbar ^2}{4}) i \varepsilon_{yzx} \pauli{x} = \mqty(0 & \frac{i\hbar ^2}{2} \\ \frac{i\hbar ^2}{2} & 0). $$
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	Solución: Teniendo que los operadores escalera se definen como
+		$$ S_+ = \hbar \mqty(0 & 1 \\ 0 & 0), \qquad S_- = \hbar \mqty(0 & 0 \\ 1 & 0). $$
+		Y que $\ket{S_y +} = \frac{1}{\sqrt{2}} \mqty(1 \\ i)$ y $\ket{S_y -} = \frac{1}{\sqrt{2}} \mqty(1 \\ -i)$
+	\begin{enumerate}[a)]
+		\item $$ S_+ \ket{S_y +} = \mqty(\frac{i}{\sqrt{2}} \\ 0). $$
+		\item $$ S_+ \ket{S_y -} = \mqty(-\frac{i}{\sqrt{2}} \\ 0). $$
+		\item $$ S_- \ket{S_y +} = \mqty(0 \\ \frac{1}{\sqrt{2}}). $$
+		\item $$ S_- \ket{S_y -} = \mqty(0 \\ \frac{1}{\sqrt{2}}). $$
+	\end{enumerate}
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%

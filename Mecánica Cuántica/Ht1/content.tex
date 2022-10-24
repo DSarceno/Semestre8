@@ -68,37 +68,44 @@
 \end{ejercicio}
 
 \begin{ejercicio}
-	Teniendo las funciones $\varphi _{0,1} (x)$
-		$$ \varphi _0 (x) = \frac{e^{-\frac{x^2}{2}}}{\sqrt[4]{\pi }} $$
-		$$ \varphi _1 (x) = \frac{\sqrt{2} e^{-\frac{x^2}{2}} x}{\sqrt[4]{\pi }}, $$
-	Aplicamos el hamiltoniano $H = \frac{1}{2} p^2 + \frac{1}{2} x^2$ con $p = -i\dv{x}$, lo que nos da
-		$$ H \varphi _0 (x) = \frac{e^{-\frac{x^2}{2}}}{2 \sqrt[4]{\pi }} = \frac{1}{2} \varphi _0 (x), $$
-	y
-		$$ H \varphi _1 (x) = \frac{3 e^{-\frac{x^2}{2}} x}{\sqrt{2} \sqrt[4]{\pi }} = \frac{3}{2} \varphi _1 (x). $$
-	Ahora, si definimos otra función
-		$$ \varphi _2 (x) = \frac{e^{-\frac{x^2}{2}} \left(\alpha x^2-1\right)}{\sqrt{2} \sqrt[4]{\pi }}, $$
-	de modo que sea ortogonal a $\varphi _0 (x)$ y $\varphi _1 (x)$, se encuentra el valor de $\alpha$. Para ello utilizamos mathematica, y el resultado de los productos internos respectivos, se tiene
-		$$ \int _{-\infty} ^\infty \dd{x} \varphi _0 (x) \varphi _2 ^* (x) = \frac{\alpha -2}{2 \sqrt{2}} $$
-	y
-		$$ \int _{-\infty} ^\infty \dd{x} \varphi _1 (x) \varphi _2 ^* (x) = 0. $$
-	Entonces el valor de $\alpha = 2$. Aplicando el hamiltoniano, vemos que también es función propia de él, con valor propio $\flatfrac{5}{2}$
-		$$ H \varphi _2 (x) = \frac{5 e^{-\frac{x^2}{2}} \left(2 x^2-1\right)}{2 \sqrt{2} \sqrt[4]{\pi }} = \frac{5}{2} \varphi _2 (x). $$
+	\begin{enumerate}[a)]
+		\item Teniendo las funciones $\varphi _{0,1} (x)$
+			$$ \varphi _0 (x) = \frac{e^{-\frac{x^2}{2}}}{\sqrt[4]{\pi }} $$
+			$$ \varphi _1 (x) = \frac{\sqrt{2} e^{-\frac{x^2}{2}} x}{\sqrt[4]{\pi }}, $$
+		Aplicamos el hamiltoniano $H = \frac{1}{2} p^2 + \frac{1}{2} x^2$ con $p = -i\dv{x}$, lo que nos da
+			$$ H \varphi _0 (x) = \frac{e^{-\frac{x^2}{2}}}{2 \sqrt[4]{\pi }} = \frac{1}{2} \varphi _0 (x), $$
+		y
+			$$ H \varphi _1 (x) = \frac{3 e^{-\frac{x^2}{2}} x}{\sqrt{2} \sqrt[4]{\pi }} = \frac{3}{2} \varphi _1 (x). $$
+		\item Ahora, si definimos otra función
+			$$ \varphi _2 (x) = \frac{e^{-\frac{x^2}{2}} \left(\alpha x^2-1\right)}{\sqrt{2} \sqrt[4]{\pi }}, $$
+		de modo que sea ortogonal a $\varphi _0 (x)$ y $\varphi _1 (x)$, se encuentra el valor de $\alpha$. Para ello utilizamos mathematica, y el resultado de los productos internos respectivos, se tiene
+			$$ \int _{-\infty} ^\infty \dd{x} \varphi _0 (x) \varphi _2 ^* (x) = \frac{\alpha -2}{2 \sqrt{2}} $$
+		y
+			$$ \int _{-\infty} ^\infty \dd{x} \varphi _1 (x) \varphi _2 ^* (x) = 0. $$
+		Entonces el valor de $\alpha = 2$. 
+		\item Aplicando el hamiltoniano, vemos que también es función propia de él, con valor propio $\flatfrac{5}{2}$
+			$$ H \varphi _2 (x) = \frac{5 e^{-\frac{x^2}{2}} \left(2 x^2-1\right)}{2 \sqrt{2} \sqrt[4]{\pi }} = \frac{5}{2} \varphi _2 (x). $$
+	\end{enumerate}
 \end{ejercicio}
 
 \begin{ejercicio}
-	Tomando el operador creación
-		$$ a^\dagger = \sqrt{\frac{m\omega}{2\hbar}} \qty(x - \frac{\hbar}{m\omega}  \dv{x}); $$
-	además, sabiendo que $\braket{x}{2} = \frac{1}{\sqrt{2}} \mel{x}{a^{\dagger ^{2}}}{0}$ y que
-		$$ \braket{x}{0} = \varphi _o (x) = \qty(\frac{m\omega}{2\hbar})^{\flatfrac{1}{4}} e^{-\frac{m\omega}{2\hbar} x^2}. $$
-	Entonces, sustituyendo las relaciones obtenidas ateriormente se llega a $\varphi _2 (x)$, 
-		$$ \varphi _2 (x) = \frac{1}{\sqrt{2}} \qty(\frac{m\omega}{\pi \hbar})^{\flatfrac{1}{4}} \qty(\frac{2m\omega}{\hbar} x^2 - 1) e^{-\frac{m\omega}{2\hbar} x^2} $$
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.75]{img/graphs.pdf}
-		\caption{Gráfica de las funciones de onda $\varphi _{0,1,2} (x)$.}
-		\label{graphs}
-	\end{figure}
-	Para el útlimo inciso, ver el script de mathematica.
+	Solución
+	\begin{enumerate}[a)]
+		\item Tomando el operador creación
+			$$ a^\dagger = \sqrt{\frac{m\omega}{2\hbar}} \qty(x - \frac{\hbar}{m\omega}  \dv{x}); $$
+		además, sabiendo que $\braket{x}{2} = \frac{1}{\sqrt{2}} \mel{x}{a^{\dagger ^{2}}}{0}$ y que
+			$$ \braket{x}{0} = \varphi _o (x) = \qty(\frac{m\omega}{2\hbar})^{\flatfrac{1}{4}} e^{-\frac{m\omega}{2\hbar} x^2}. $$
+		Entonces, sustituyendo las relaciones obtenidas ateriormente se llega a $\varphi _2 (x)$, 
+			$$ \varphi _2 (x) = \frac{1}{\sqrt{2}} \qty(\frac{m\omega}{\pi \hbar})^{\flatfrac{1}{4}} \qty(\frac{2m\omega}{\hbar} x^2 - 1) e^{-\frac{m\omega}{2\hbar} x^2} $$
+		\item Graficando las funciones de onda:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{img/graphs.pdf}
+			\caption{Gráfica de las funciones de onda $\varphi _{0,1,2} (x)$.}
+			\label{graphs}
+		\end{figure}
+		\item Para el útlimo inciso, ver el script de mathematica.
+	\end{enumerate}
 \end{ejercicio}
 
 

@@ -1,5 +1,56 @@
 \begin{ejercicio}
-	Teniendo 
+	
+\end{ejercicio}
+
+
+\begin{ejercicio}
+	Tomando el operador número y el estado $\ket{\psi} = \frac{1}{\sqrt{17}} \ket{0} + \frac{3}{\sqrt{17}} \ket{1} - \frac{2}{\sqrt{17}} \ket{2} - \sqrt{\frac{3}{17}} \ket{3},$
+	entonces, calculando el valor esperado $\expval{N}{\psi}$, primero aplicamos $N \ket{\psi} = a^\dagger a \ket{\psi}$
+		$$ a^\dagger a \ket{\psi} = \frac{3}{\sqrt{17}} \ket{1} - 2\sqrt{\frac{4}{17}} \ket{1} - \sqrt{\frac{27}{17}} \ket{2}, $$
+		$$ \expval{N}{\psi} = \qty(\frac{1}{\sqrt{17}} \bra{0} + \frac{3}{\sqrt{17}} \bra{1} - \frac{2}{\sqrt{17}} \bra{2} - \sqrt{\frac{3}{17}} \bra{3}) \qty(\frac{3}{\sqrt{17}} \ket{1} - 2\sqrt{\frac{4}{17}} \ket{1} - \sqrt{\frac{27}{17}} \ket{2}) = \frac{26}{17}. $$
+	Para el Hamiltoniano, $H = \hbar \omega \qty(\hat{N} + \frac{1}{2})$, utilizamos la función \texttt{ExpectationValue[]} creada el semestre pasado para encontrar el valor esperado del Hamiltoniano, el cual es
+		$$ \expval{H}{\psi} = \frac{69}{34} \hbar \omega . $$
+\end{ejercicio}
+
+
+\begin{ejercicio}
+	Sabiendo que $\Delta X = \sqrt{\expval{X^2} - \expval{X}^2}$ y $\Delta P = \sqrt{\expval{P^2} - \expval{P}^2}$. Encontramos cada uno de los valores esperados 
+	\begin{align*}
+		\expval{X} &= \sqrt{\frac{\hbar}{2m\omega}} \qty(\expval{a}{5} + \expval{a^\dagger}{5}) = 0, \\
+		\expval{P} &= 0, \\
+		\expval{X^2} &= \frac{\hbar}{2m\omega} \qty(2(5) + 1) = \frac{11\hbar}{2m\omega}, \\
+		\expval{P^2} &= \frac{m\omega \hbar}{2} \qty(2(5) + 1) = \frac{11m\omega \hbar}{2};
+	\end{align*}
+	por lo tanto
+		$$ \qty(\Delta X \Delta P)_5 = \sqrt{\frac{11\hbar}{2m\omega}} \sqrt{\frac{11m\omega \hbar}{2}} = \frac{11\hbar}{2}. $$
+	Para $\ket{0}$, se tiene
+	\begin{align*}
+		\expval{X^2}{0} &= \frac{\hbar}{2m\omega}, \\
+		\expval{P^2}{0} &= \frac{\hbar m\omega}{2}.
+	\end{align*}
+	Con lo que $\qty(\Delta X \Delta P)_0 = \frac{\hbar}{2}$.
+\end{ejercicio}
+
+
+\begin{ejercicio}
+	Teniendo la energía para el oscilador cuántico $E_n = \hbar \omega \qty(n + \frac{1}{2})$, tomando la energía del oscilador armónico $E = \frac{1}{2} m\omega ^2 l^2$. Entonces, en términos de $\omega$
+	 	$$ l = \sqrt{\frac{\hbar}{m \omega}}. $$
+	 La probabilidad fuera del límite clásico es
+	 	$$ P_{out} = 1 - P_{in} \qquad \Rightarrow \qquad P_{out} = 1 - \int _{-A_0} ^{A_0} \abs{\psi _0 (x)} \dd{x}, $$
+	 para el estado base se tiene
+	 	$$ \psi _0 (x) = \qty(\frac{m\omega}{\pi \hbar})^{\flatfrac{1}{4}} e^{-\frac{m\omega x^2}{2\hbar}}; $$
+	 por lo tanto
+	 	$$ P_{out} = 1 - \qty(\frac{m\omega}{\pi \hbar})^{\flatfrac{1}{2}} \int _{-A_0} ^{A_0} e^{-\frac{m\omega x^2}{\hbar}} \dd{x} \qquad \Rightarrow \qquad P_{out} = 1 -\erf{1} = 15.73\%. $$
+\end{ejercicio}
+
+
+\begin{ejercicio}
+	
+\end{ejercicio}
+
+
+\begin{ejercicio}
+	
 \end{ejercicio}
 
 
