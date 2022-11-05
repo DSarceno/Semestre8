@@ -1,0 +1,111 @@
+\documentclass[11pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amsthm,amssymb} %modos matemáticos y  simbolos
+\usepackage{mathrsfs}
+\usepackage{latexsym,amsfonts} %simbolos matematicos
+\usepackage{graphicx}
+\usepackage{physics} %Simbolos fisicos
+\usepackage{array} %mejores formatos de tabla
+\usepackage{tabulary}
+\usepackage{multirow} %ocupar varias filas en una tabla
+\usepackage{fancybox} %recuadros talegas
+\usepackage{float} %ubicar graficas
+\usepackage{color}
+\usepackage{comment}
+\usepackage{stackrel}
+\usepackage{calligra}
+\usepackage{lipsum} % texto de relleno
+\usepackage{cite}
+\author{Diego Sarceño}
+\title{Resonadores Ópticos y Propagación de Laseres}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+\date{\today} 
+%\subject{} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\frame{
+	\frametitle{Enunciado del Problema (Problema 3 Capítulo 3)}
+	En un resonador de ida y vuelta para un laser, el espejo completamente reflejante a la izquierda tiene poder focal convergente $P_1$ y el espejo de salida tiene poder convergente $P_2$. La región de en medio contiene una gran cantidad de lentes, tal que la matriz de trasnporte de datos no es una matriz simple. Si denotamos esta matriz por
+		$$ M = \mqty(A_0 & B_0 \\ C_0 & D_0), $$
+	demuestre que la matriz ida y vuelta calculada respecto del espejo de salida tiene la forma
+		$$ \mqty(A & B \\ C & D) = \mqty(A_0 & B_0 \\ C_0 & D_0) \mqty(1 & 0 \\ -P_1 & 1) \mqty(D_0 & B_0 \\ C_0 & A_0) \mqty(1 & 0 \\ -P_2 & 1). $$
+}
+
+
+\frame{
+	\frametitle{Solución}
+	Es necesario considerar el efecto de la propagación inversa a travez del sistema optico. Se puede visualizar como una cadena de matrices $\mathcal{R}$ y $\mathcal{F}$ cuyo producto es la matriz $\mqty(A_0 & B_0 \\ C_0 & D_0)$. Si la misma cadena de matrices es multiplicada en reversa, el resultado debería ser $\mqty(D_0 & B_0 \\ C_0 & A_0)$.
+}
+
+
+
+\frame{
+	\frametitle{Solución}
+	Por inducción, definimos la matriz
+	$$ M = M_1 M_2 \cdots M_i \cdots M_n, $$
+	donde cada matriz individual es $M_i$ es unimodular y sus elementos $A_i$ y $D_i$ son iguales. Tomamos a $M_B$ como la matriz "hacia atras"
+		$$ M_B = M_n \cdots M_i \cdots M_2 M_1. $$
+	Con lo que es necesario demostrar que
+		$$ M_B = \mqty(D & B \\ C & A). $$
+}
+
+
+
+\frame{
+	\frametitle{Solución}
+	Consideramos la cadena
+		$$ M_B \mqty(-1 & 0 \\ 0 & 1) M = M_n \cdots M_i \cdots M_2 \underbrace{M_1 \mqty(-1 & 0 \\ 0 & 1) M_1} M_2 \cdots M_i \cdots M_n, $$
+	tomando el producto señalado,
+		$$ M_1 \mqty(-1 & 0 \\ 0 & 1) M_1 = \mqty(A_1 & B_1 \\ C_1 & D_1) \mqty(-1 & 0 \\ 0 & 1) \mqty(A_1 & B_1 \\ C_1 & D_1) $$
+		$$ = \mqty(B_1 C_1 - A_1 ^2 &  B_1 (D_1 - A_1) \\ C_1 (D_1 - A_1) & D_1 ^2 - B_1 C_1) = \mqty(-1 & 0 \\ 0 & 1), $$
+	sabiendo que $A_1 = D_1$ y $A_1 D_1 - C_1 B_1$. Con esta idea, es claro que
+		$$ M_i \mqty(-1 & 0 \\ 0 & 1) M_i = \mqty(-1 & 0 \\ 0 & 1). $$
+}
+
+
+
+\frame{
+	\frametitle{Solución}
+	Con lo encontrado anteriormente, multiplicamos por la derecha los siguientes operadores equivalentes, uno por el lado izquierdo y el otro en el lado derecho de la igualdad
+		$$ M^{-1} \mqty(-1 & 0 \\ 0 & 1) \equiv \mqty(D & -B \\ -C & A) \mqty(-1 & 0 \\ 0 & 1). $$
+	Entonces
+		$$ M_B = \mqty(-1 & 0 \\ 0 & 1) \mqty(D & -B \\ -C & A) \mqty(-1 & 0 \\ 0 & 1) = \mqty(D & B \\ C & A). $$
+	Llegamos a lo que queríamos demostrar.
+}
+
+
+
+
+\frame{
+	\centering
+	\vspace{1cm}
+	GRACIAS POR SU ATENCIÓN $<3$
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

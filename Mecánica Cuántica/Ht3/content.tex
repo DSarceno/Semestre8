@@ -1,5 +1,29 @@
 \begin{ejercicio}
-	Teniendo 
+	Solución
+	\begin{enumerate}[a)]
+		\item El operador es claramente unitario, sabiendo que $x = x^\dagger$, entonces $U(k) U(k) ^\dagger = \mathbb{1}$. Para la sumatoria, reescribimos el valor absoluto como el producto de un complejo por su conjugado
+			$$ \sum _{n'} \abs{\mel{n}{U}{n'}}^2 = \sum _{n'} \mel{n}{U}{n'} \mel{n}{U}{n'} ^\dagger = \sum _{n'} \mel{n}{U}{n'} \mel{n'}{U^\dagger}{n} = \sum _{n'} \braket{n} = 1. $$
+		\item 
+		\item Tomando
+				$$ \qty(e^{\lambda a^\dagger})^\dagger \ket{n} = e^{\lambda a} \ket{n}, $$
+			escribiendo la exponencial en serie de tayor
+				$$ \qty(\sum _i \lambda ^i \frac{a^i}{i!}) \ket{n} = \ket{n} + \lambda \sqrt{n} \ket{n - 1} + \cdots + \frac{\lambda ^{n - 1}}{(n - 1)!} \sqrt{(n - 1)!} \ket{n - (n - 1)} + \frac{\lambda ^n}{n!} \sqrt{n!} \ket{0}. $$
+			Dado que $\braket{i}{j} = \delta _{ij}$, entonces
+				$$ \mel{n}{e^{\lambda a^\dagger}}{0} = \frac{\lambda ^n}{\sqrt{n!}}. $$
+		\item 	
+	\end{enumerate}	 
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	Solución
+	\begin{enumerate}[a)]
+		\item 
+		\item 
+		\item 	
+	\end{enumerate}	 
 \end{ejercicio}
 
 
@@ -7,12 +31,25 @@
 
 
 
-
-
-
-
-
-
+\begin{ejercicio}
+	Solución
+	\begin{enumerate}[a)]
+		\item Encontramos el hamiltoniano dado el potencial
+				$$ H = \frac{p^2}{2m} + \frac{1}{2} m\omega ^2 x^2 - qE(t) x = \hbar \omega (a^\dagger a + \frac{1}{2}) - qE(t)\sqrt{\frac{\hbar}{2m\omega}}(a^\dagger + a). $$
+			Encontrando los conmutadores
+			\begin{align*}
+				[H,a] &= \hbar \omega \qty([a^\dagger a,a] + [\flatfrac{1}{2},a]) - qE(t) \sqrt{\frac{\hbar}{2m\omega}} \qty([a^\dagger ,a] + [a,a]) \\
+				&= -\hbar \omega a + qE(t) \sqrt{\frac{\hbar}{2m\omega}}.
+			\end{align*}	
+			
+			\begin{align*}
+				[H,a^\dagger] &= \hbar \omega \qty([a^\dagger a,a^\dagger] + [\flatfrac{1}{2},a^\dagger]) - qE(t) \sqrt{\frac{\hbar}{2m\omega}} \qty([a^\dagger ,a^\dagger] + [a,a^\dagger]) \\
+				&= \hbar \omega a^\dagger - qE(t) \sqrt{\frac{\hbar}{2m\omega}}.
+			\end{align*}	
+		\item 
+		\item 
+	\end{enumerate}	 
+\end{ejercicio}
 
 
 %%%%%%%
