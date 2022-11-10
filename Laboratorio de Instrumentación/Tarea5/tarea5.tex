@@ -65,9 +65,11 @@
     \large{Tarea 5}
 \end{center}
 
-\vspace{10.5cm}
+\vspace{9.75cm}
 
 \begin{flushright}
+	Javier de León \\
+    $201603068$ \\
     Diego Sarceño \\
     $201900109$
 \end{flushright}
@@ -94,26 +96,60 @@
 
 \subsection{General}
     \begin{enumerate}[1.]
-        \item 
+        \item Comprender el funcionamiento de la region de corte y saturación de los transistores.
     \end{enumerate}
 \subsection{Específicos}
     \begin{enumerate}
-        \item 
+        \item Ser capaz de tener un control por medio de transistores utilizados como interruptores.
     \end{enumerate}
 %\section{Introducción}
     
 \section{Marco Teórico}
+Ya tratamos los transistores y diodos en las prácticas pasadas, así que no ahondaremos en describir su funcionamiento, únicamente en el de los puentes $H$.
+\subsection{Puentes H}
+El puente $H$ es un circuito que permite que un motor de corriente directa pueda girar en ambos sentidos mediante un cambio manual (push bottom, switch, etc.), nombrados así por su característica forma. Su construcción puede variar entre $4$ transistores NPN, $4$ diodos y un interruptor SPDT para enviar corriente y activar diferentes transistores o únicamente switch (Figura \ref{bridge_wiki}) que permitan el paso de corriente cuyo análisis se puede hacer mediante una tabla de verdad.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{img/bridge_wiki.png}
+	\caption{Puente H con switch, imagen extraída de Wikipedia.}
+	\label{bridge_wiki}
+\end{figure}
+Para el circuito de la figura \ref{bridge_wiki}, se tiene la siguiente tabla de verdad
+\begin{table}[H]
+	\centering
+	\caption{Tabla extraída de Wikipedia (Solo se muestran las configuraciones que serán reelvantes en el resto de la práctica).}
+	\begin{tabular}{||c|c|c|c||c||}
+		\hline
+		\hline
+		$S_1$ & $S_2$ & $S_3$ & $S_4$ & \textbf{Resultado} \\
+		\hline
+		\hline
+		1 & 0 & 0 & 1 & El motor gira en "avance" \\
+		1 & 0 & 0 & 1 & El motor gira en "retroceso" \\
+		0 & 0 & 0 & 0 & El motor se detiene bajo su inercia \\
+		\hline
+		\hline
+	\end{tabular}
+\end{table}
     
 \section{Diseño Experimental}
-    \subsection{Materiales a Utilizar}
-        \begin{itemize}
-    	\item 
-    \end{itemize}
-
-    \subsection{Procedimientos}
-        \begin{enumerate}
-            \item 
-        \end{enumerate}
+El circuito simulado sigue el siguiente diagrama
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{img/bridge_diagram.png}
+	\caption{Diagrama del circuito con puente H.}
+	\label{bridge_diagram}
+\end{figure}
+%    \subsection{Materiales a Utilizar}
+%        \begin{itemize}
+%    	\item 
+%    \end{itemize}
+%
+%    \subsection{Procedimientos}
+%        \begin{enumerate}
+%            \item 
+%        \end{enumerate}
 \section{Resultados}
     
 \section{Discusión de Resultados}
@@ -128,6 +164,22 @@
 %\section{Recomendaciones}
 
 \section{Anexos}
+\subsection{Simulación}
+Simulación realizada en \textit{TinkerCad}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{img/bridge_plus_simu.png}
+	\caption{Simulación realizada del circuito con puente H con motor girando a favor de las manecillas.}
+	\label{bridge_plus_simu}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{img/bridge_minus_simu.png}
+	\caption{Simulación realizada del circuito con puente H con motor girando en contra de las manecillas.}
+	\label{bridge_minus_simu}
+\end{figure}
+
 
 \begin{thebibliography}{00}
 \bibitem{b1} Donald A. Neamen, 2010. \textit{Microelectronics: Circuit Analysis and Design}. 4th ed. Mc Graw Hill.
