@@ -1,0 +1,38 @@
+\begin{ejercicio}
+	Dado el campo magnético $\vb{B} = B_o \cos{\omega t} \vz$, se tienen los siguientes incisos.
+	\begin{enumerate}[a)]
+		\item El hamiltoniano esta dado por la expresión $H(t) = -\vec{S} \cdot \vec{B}$, lo que da
+			$$ \boxed{H(t) = -\frac{\hbar}{2}  B_o \cos{\omega t} \, \pauli{z}.} $$
+		\item Reescribiendo el hamiltoniano en términos de los valores propios del mismo
+			$$ H(t) = -\frac{\hbar}{2}  B_o \cos{\omega t} \qty(-\ketbra{1} + \ketbra{0}), $$
+				Entonces, suponemos que $U(t) = u_1 (t) \ketbra{1} + u_0 (t) \ketbra{0}$, por lo que la ecuación diferencial se divide en dos, una para cada entrada, distinta de cero, de la matriz.
+			$$ \pdv{u_1 (t)}{t} = -\frac{i}{2}  B_o \cos{\omega t} \, u_1 (t), $$
+			$$ \pdv{u_0 (t)}{t} = -\frac{i}{2}  B_o \cos{\omega t} \, u_0 (t), $$
+		tomando $u_0 (0) = u_1 (0) = 1$, las soluciones a las ecuaciones diferenciales es
+			$$ u_0 (t) = e^{-i\lambda (t)}, \qquad \qquad u_1 (t) = e^{i\lambda (t)} $$
+		con $\lambda (t) = -\frac{B_o \sin{\omega t}}{2\omega}$. Con esto, el operador evolución es
+			$$ \boxed{ U(t) = \mqty(e^{-i\lambda (t)} & 0 \\ 0 & e^{i\lambda (t)}). } $$
+		\item Para $t = 0$ se tiene $\ket{S_x +} = \frac{1}{\sqrt{2}} \mqty(1 \\ 1) = \ket{\psi (0)}$, entonces
+			$$ \boxed{ \ket{\psi (t)} = U(t) \ket{\psi (0)} = \frac{1}{\sqrt{2}} \mqty(e^{-i\lambda (t)} \\ e^{i\lambda (t)}). } $$
+		\item Encontramos la probabilidad utilizando
+			$$ P(-\flatfrac{\hbar}{2}) = \frac{\abs{\braket{S_x -}{\psi (t)}}^2}{\braket{\psi (t)}}, $$
+		desarrollando con ayuda de mathematica, se llega a 
+			$$ \boxed{ P(-\flatfrac{\hbar}{2}) = \frac{\sin{\lambda (t)}}{\cos{2\lambda (t)}}. } $$
+	\end{enumerate}
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%

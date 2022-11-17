@@ -1,0 +1,51 @@
+\begin{ejercicio}
+	Teniendo el conmutador, desarrollamos
+		$$ [S,H] = [S,-S\cdot B] \equiv \sum _{i=1} ^3 -[S_i ,S_i] B_i = 0.  $$
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	Aplicando el operador al estado de la partícula
+		$$ \frac{1}{\sqrt{2}} \qty(\mathcal{1} + i\pauli{1}) \ket{\psi} = \frac{1}{\sqrt{2}} \qty(\cos{\frac{\theta}{2}} + i\sin{\frac{\theta}{2}} e^{i\phi}) \ket{0} + \frac{1}{\sqrt{2}} \qty(\sin{\frac{\theta}{2}} e^{i\phi} + i\cos{\frac{\theta}{2}} ) \ket{1}, $$
+	agrupando llegamos a
+		$$ = \cos{\frac{\theta}{2}} \underbrace{\frac{\ket{0} + i\ket{1}}{\sqrt{2}}}_{\ket{S_y +}} + i\sin{\frac{\theta}{2}} e^{i\phi} \frac{\ket{0} + i\ket{1}}{\sqrt{2}} = \cos{\frac{\theta}{2}} \ket{S_y +} + i\sin{\frac{\theta}{2}} e^{i\phi} \ket{S_y +} $$
+	lo que implica que el estado se rotó $90^o$ alrededor del eje $x$.
+\end{ejercicio}
+
+
+
+
+
+
+\begin{ejercicio}
+	Solución
+	\begin{enumerate}[a)]
+		\item El estado es $\ket{\psi (0)} = \frac{1}{\sqrt{2}} \qty(\ket{+} + i\ket{-})$.
+		\item Siendo $H(t) = \omega (t) S_z$ y $\omega (t) = \lambda t$ para $t\leq T$, entonces resolviendo la ecuación
+			$$ \lambda t S_z \ket{\psi} = i\hbar \pdv{\ket{\psi}}{t}, $$
+		se tiene
+			$$ \ket{\psi (t)} = e^{-\frac{i\lambda t^2}{2} S_z} \ket{S_y +} = \frac{1}{\sqrt{2}} \qty[e^{-\frac{i\lambda t^2}{4}} \ket{0} + ie^{\frac{i\lambda t^2}{4}}\ket{1} ]. $$
+			Por lo que $\theta (t) = \frac{\lambda t^2}{4}$.
+	\end{enumerate}
+\end{ejercicio}
+
+
+
+
+
+\begin{ejercicio}
+	Solución
+	\begin{enumerate}[a)]
+		\item Tomando $H = \vb{M} \cdot B_o = \gamma S\cdot B_o$ ($B_o = -\frac{1}{\gamma} (\omega _x,\omega _y,\omega _x,z)$) se tiene, por definición de operador evolución
+			$$ U(t,0) = e^{-\frac{iHt}{\hbar}} = e^{\frac{i}{\hbar} \qty[\omega _x S_x + \omega _y S_y + \omega _z S_z]t} = e^{iMt}. \qquad \qquad \square $$
+		\item La representación matricial de $M$ luego de desarrollar los productos escalares
+			$$ M = \frac{1}{2} \mqty(\omega _z & \omega _x - i\omega _y \\ \omega _x + i\omega _y & -\omega _z), $$
+		Y su cuadrado es
+			$$ M ^2 = \frac{1}{2} \mqty(\omega _x ^2 + \omega _y ^2 + \omega _z ^2 & 0 \\ 0 & \omega _x ^2 + \omega _y ^2 + \omega _z ^2). $$
+	\end{enumerate}
+\end{ejercicio}
+
+
+%%%%%%%
