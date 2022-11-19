@@ -1,0 +1,117 @@
+\input{Preamble_general.tex}
+
+
+
+
+% para los metadatos del PDF
+%\usepackage[%
+%bookmarksnumbered,%
+%pdfauthor={Diego Sarceño (dsarceno68@gmail.com)},%
+%pdftitle={Puntos de Lagrange},%
+%pdfsubject={Proyecto},%
+%pdfkeywords={template, template}]{hyperref}
+
+\title{\sc Parcial 1, Parcial 2 y Examen Final \\ \footnotesize{Materia Condensada}}%
+\author{Diego Sarceño \\ $201900109$}
+\date{Guatemala, \today}
+%% 20210307
+
+\begin{document}  
+\maketitle
+
+
+
+\section{Parcial 1}
+\label{sec:parcial1}
+%\justify 
+	
+%\subsection{Problema 1}
+
+
+
+
+\section{Parcial 2}
+\label{sec:parcial2}
+
+\subsection{Problema 1}
+Para el oscilador armónico cuántico se tiene el hamiltoniano
+\begin{equation}
+	H = \frac{p^2}{2m} + \frac{1}{2} m\omega ^2 q^2 , \label{hamilQAO}
+\end{equation}
+también las relaciones adensionales $Q^2 = \flatfrac{m\omega q^2}{\hbar}$ y $P^2 = \flatfrac{p^2}{m\hbar \omega}$. Los operadores $q$ y $p$ satisfacen $[q,p] = i\hbar$ y se tienen los operadores de creación y aniquilación
+	$$ a = \frac{1}{\sqrt{2}} (Q + iP), \qquad a^\dagger = \frac{1}{\sqrt{2}} (Q - iP), $$
+con el operador número definido como $N = a^\dagger a$.
+\begin{enumerate}[a)]
+	\item Dadas las relaciones adimensionales $Q^2$ y $P^2$, se tienen de forma lineal $Q = \sqrt{\flatfrac{m\omega}{\hbar}} q$ y $P = \flatfrac{1}{\sqrt{m\omega \hbar}} p$, entonces, el conmutaror $[Q,P]$ es
+		$$ [Q,P] = \sqrt{\frac{m\omega}{\hbar}} \sqrt{\frac{1}{m\omega \hbar}} \underbrace{[q,p]}_{i\hbar} = \boxed{ i\hbar . } $$
+	\item Para el conmutador entre los operadores de creación y aniquilación se tiene
+		$$ [a,a^\dagger] = \frac{1}{2} \qty([Q,Q] + i[P,Q] - i[Q,P] + [P,P]) = \frac{1}{2} ( 1 + 1 ) = \boxed{1.} $$
+	\item El hamiltoniano en terminos de las relaciones adimensionales es
+		$$ H = \frac{\hbar \omega}{2} \qty(P^2 + Q^2), $$
+	y, utilizando mathematica (para facilitar los cálculos), los operadores $Q$, $P$ en términos de los operadores aniquilación y creación, son
+		$$ Q = \frac{1}{\sqrt{2}} \qty(a + a^\dagger), \qquad P = -\frac{i}{\sqrt{2}} \qty(a - a^\dagger). $$
+	Entonces
+		$$ Q^2 = \frac{1}{2} \qty(a^2 + a^{\dagger ^2} + aa^\dagger + a^\dagger a), \qquad P^2 = -\frac{1}{2} (a^2 + a^{\dagger ^2} - aa^\dagger - a^\dagger a). $$
+	Sustituyendo en el hamiltoniano encontrado este inciso
+		$$ H = \boxed{ \frac{\hbar \omega}{2} \qty(aa^\dagger + a^\dagger a). } $$
+	\item Para este inciso, utilizamos la siguiente propiedad de los conmutadores $[AB,C] = A[B,C] + [A,C]B$, entonces
+		$$ [N,a] = a^\dagger [a,a] + \underbrace{[a^\dagger ,a]}_{-1} a = \boxed{ -a. } $$
+		$$ [N,a^\dagger] = a^\dagger [a,a^\dagger] + [a^\dagger ,a^\dagger] a = \boxed{ -a^\dagger .} $$
+\end{enumerate}
+
+
+
+%\subsection{Problema 2}
+%
+%
+%
+%
+%\subsection{Problema 3}
+%
+%
+%
+%
+%
+%
+%
+%\section{Examen Final}
+%\label{sec:final}
+%
+%\subsection{Problema 1}
+%
+%
+%
+%\subsection{Problema 2}
+%
+%
+%
+%
+%\subsection{Problema 3}
+
+
+
+
+
+%\section*{Agradecimientos}
+%\label{sec:agradecimientos}
+
+
+% References
+\nocite{*}
+\bibliographystyle{IEEEannot}%
+\bibliography{references}%
+
+\begin{thebibliography}{00}
+\bibitem{b1} R. Symon, \textit{Mechanics} 3a. Ed. Addison$-$Wesley Publishing Company, 1971
+\bibitem{b2} R. Taylor, \textit{Classical Mechanics}, Edwards Brothers, Inc. 2005.
+\end{thebibliography}
+
+\end{document}
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
