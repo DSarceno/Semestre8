@@ -25,8 +25,90 @@
 \label{sec:parcial1}
 %\justify 
 	
-%\subsection{Problema 1}
+\subsection{Problema 1}
+Solución:
+\begin{enumerate}[(a)]
+	\item Tomando un subonjunto propio finito ($\Lambda$) no vacío de puntos en un espacio $\R ^d$, la Celda de Voronoi para un punto $a\in \Lambda$ se define como
+		$$ V(a) := \{ x\in \R ^d :\norm{x - a} \leq \norm{x - b} \, \forall \, x\in \Lambda \} . $$
+	Donde la norma mostrada es la norma euclideana. Cada punto en $\Lambda$ tiene una Celda de Voronoi definida y esta es un polinomio. Las Celdas de Delone se forman con los elementos de $\Lambda$ como vértices. Explicado de otra forma para facilitar su visualización, los vértices de las celdas de Voronoi son los circuncentros de todas las Celdas de Delone que tienen como vértice común el punto $a$, esto para cualquier polinomio de celdas de Delone (en dos dimensiones, vease figura \ref{voronoi_delone}).
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.35]{img/voronoi_delone.png}
+			\caption{Celda de Voronoi mostrada como línea continua, Celda de Delone como línea punteada. Figura 2.1. de \cite{b1}.}
+			\label{voronoi_delone}
+		\end{figure}
+	\item La Celda de Wigner$-$Seitz es un tipo de celda primitiva (celda con volumen mínimo) trazada por un método llamado igual que la celda (figura \ref{wigner-seitz}).
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.35]{img/wigner_seitz.png}
+			\caption{Para trazar la Celda de Wigner$-$Seitz, se trazan líneas desde un punto previamente dado hasta todos los puntos más cercanos. En el punto medio de dichas líneas se trazan unas nuevas (líneas o planos) normales a ellas, el volumen/área más pequeño encerrado por esas líneas/planos, es la celda de Wigner$-$Seitz. Figura 4, capítulo 1, de \cite{b2}.}
+			\label{wigner-seitz}
+		\end{figure}
+	Mientras que la Primera Zona de Brillouin es la Celda de Wigner$-$Seitz en la red recíproca.
+	\item 
+	\item Para los planos $(111)$, $(110)$ se tiene la siguiente figura (primera y última imagen)
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{img/planes.jpeg}
+			\caption{Planos en una red cúbica simple. Imagen extraída de \cite{b3}.}
+			\label{planes}
+		\end{figure}
+		Con esto podemos encontrar los vectores normales a cada uno de los planos (apuntando al primer octante). Los puntos de interes son
+		$$
+			\left.\begin{array}{cc}
+				P_1 = (1,0,0) & Q_1 = (0,1,0) \\
+				P_2 = (0,0,1) & Q_2 = (0,1,1) \\ 
+				P_3 = (0,1,0) & Q_3 = (1,0,0) \\
+				 & \\
+				P_3 P_1 = (-1,1,0) & Q_3 Q_1 = (1,-1,0) \\
+				P_2 P_1 = (-1,0,1) & Q_2 Q_1 = (0,0,1) \\
+				\downarrow & \downarrow \\
+				P_3 P_1 \cp P_2 P_1 & Q_2 Q_1 \cp Q_3 Q_1 \\
+				\downarrow & \downarrow \\
+				N_P = (1,1,1) & N_Q = (1,1,0),
+			\end{array}\right.
+		$$
+		Con los vectores normales encontrados, utilizando el producto punto para encontrar el ángulo, se tiene
+		$$ \theta = \arccos{\frac{\abs{N_P \cdot N_Q}}{\abs{N_P} \abs{N_Q}}} = 35.26^o . $$
+	\item Teniendo la forma de empaquetamiendo atómico para una red $FCC$.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.35]{img/fcc.png}
+			\caption{$FCC$.}
+			\label{fcc}
+		\end{figure}
+		Como se puede ver en la figura \ref{fcc} el número de átomos por celda es $N_{a} = 6*\frac{1}{2} + 8*\frac{1}{8}$. El radio del átomo en términos del lado de cubo es $4R = \sqrt{2} a$, entonces el volumen del átomo es
+			$$ V_a = \frac{\sqrt{2}}{24} \pi a^3; $$
+		por lo que, el factor de empaquetamiento atómico para una red $FCC$ es
+			$$ APF = N_a \frac{V_a}{V_c} = 4*\frac{\frac{\sqrt{2}}{24} \pi a^3}{a^3} = \frac{1}{6} \sqrt{2} \pi = 0.74. $$
+	\item Tomando como idea el cálculo de la red recíproca de un \textit{sc}, cuyos vectores recíprocos son $\vb{b_1} = \qty(\flatfrac{2\pi}{a})\vx$, $\vb{b_2} = \qty(\flatfrac{2\pi}{a})\vy$ y $\vb{b_3} = \qty(\flatfrac{2\pi}{a})\vz$; y, sabiendo que una red unidimencional es equivalente a un lado del cubo, entonces, dicha red existe y es de la forma $\vb{b} = \qty(\flatfrac{2\pi}{a}) \vu{u}$. El hipervolumen de la primera zona de Brillouin es, en el caso de una dimensión, una longitud dada por los dos vectores más pequeños en la red, i.e. $\vb{b}$, $-\vb{b}$, cuyos bisectores son $-\frac{\pi}{a}$ y $\frac{\pi}{a}$; por lo que, el hipervolumen de la primera zona de Brillouin es $\flatfrac{2\pi}{a}$.
+	\item El Hierro tiene una red cristalina centrada en el cuerpo (bcc), mientras que el Níquel presenta una red cristalina centrada en las caras (fcc). Entonces, encontrando la red recíproca del Hierro se tienen los vectores primitivos
+		$$ a_1 = \frac{1}{2} a\qty(-\vx + \vy + \vz), \qquad a_2 = \frac{1}{2} a\qty(\vx - \vy + \vz), \qquad a_3 = \frac{1}{2} a\qty(\vx + \vy - \vz). $$
+	Entonces, construimos los vectores de la red recíproca
+		$$ b_1 = 2\pi \frac{a_2 \cp a_3}{a_1 \cdot a_2 \cp a_3}, \qquad b_2 = 2\pi \frac{a_3 \cp a_1}{a_1 \cdot a_2 \cp a_3}, \qquad b_3 = 2\pi \frac{a_1 \cp a_2}{a_1 \cdot a_2 \cp a_3}. $$
+	Con ayuda de \textit{Mathematica} (función \texttt{Cross[]}) encontramos cada uno de los productos cruz
+		\begin{align*}
+			a_2 \cp a_3 &= \frac{1}{2} a(\vy + \vz) \\
+			a_3 \cp a_1 &= \frac{1}{2} a(\vx + \vz) \\
+			a_1 \cp a_2 &= \frac{1}{2} a(\vy + \vy) \\
+			a_1 \cdot a_2 \cp a_3 &= \frac{1}{2} a, 
+		\end{align*}
+	entonces, sustituyendo en los vectores de la red recíproca se tiene
+		\begin{align*}
+			b_1 &= \frac{2\pi}{a} (\vy + \vz) \\
+			b_2 &= \frac{2\pi}{a} (\vx + \vz) \\
+			b_3 &= \frac{2\pi}{a} (\vx + \vy).
+		\end{align*}
+	Los cuales son equivalentes a los vectores primitivos para una red fcc, por ende a la red cristalina del Níquel.
+	\item 
+\end{enumerate}
 
+\subsection{Problema 2}
+\subsection{Problema 3}
+Según el libro \cite{b1}, el factor de forma atómica, lo podemos escribir como	
+	$$ f(k) = \frac{4\pi}{e} \int \dd{r} r^2 \rho (r) \frac{\sin{kr}}{kr}, $$
+reemplazando $\rho (r) = \frac{1}{\pi a_o ^3} e^{\flatfrac{-2r}{a_o}}$ se tiene
+	$$ f(k) = \frac{4}{kea_o ^3} \underbrace{\int _0 ^\infty r\sin{kr} e^{\flatfrac{-2r}{a_o}} \dd{r}}_{\text{Utilizando Mathematica}} = \frac{4}{kea_o ^3} \qty(\frac{4a_o ^3 k}{(4 + k^2 a_o ^2)^2}) = \frac{16}{e\qty(4 + k^2 a_o ^2)^2}. $$
 
 
 
@@ -61,19 +143,43 @@ con el operador número definido como $N = a^\dagger a$.
 
 
 
-%\subsection{Problema 2}
-%
-%
-%
-%
-%\subsection{Problema 3}
-%
-%
-%
-%
-%
-%
-%
+\subsection{Problema 2}
+
+
+\subsection{Problema 3}
+La energía cinética individual está dada como $\frac{1}{2} M \dot{u}_s ^2$, y la fuerza entre los átomos contiguos de la red tiene la forma de la ley de Hooke $-C (u_s - u_{s + 1})$ (solo tomando el estiramiento). Su potencial esta dado por $\frac{1}{2} C (u_s - u_{s + 1})^2$, esto se extiende a toda la red. Con esto, la energía total esta dada por
+	$$ E = \frac{1}{2} M \dot{u}_s ^2 + \frac{1}{2} C (u_s - u_{s + 1})^2. $$
+Para encontrar la energía potencial y cinética promediada en el tiempo partimos de sustituir en la energía potencial la función $u_s$, entonces se tiene
+	\begin{align*}
+		u_s - u_{s + 1} &= u\cos{\qty(\omega t - ska)} - u\cos{\qty(\omega t - (s+1)ka)} \\
+		&= u\cos{\qty(\omega t - ska)} - \qty[u\cos{\qty(\omega t - ska)} \cos{ka} - u\sin{\qty(\omega t - ska)} \sin{ka}] \\
+		(u_s - u_{s + 1})^2 &= u^2 \cos^2 {\qty(\omega t - ska)} (1 - \cos{ka})^2 + u^2 \sin^2 {\qty(\omega t - ska)} \sin^2 {ka} \\ 
+		&- 2u^2 \cos{\qty(\omega t - ska)}\sin{\qty(\omega t - ska)} (1 - \cos{ka})\sin{ka},
+	\end{align*}
+	sabiendo que $\expval{\sin^2 {x}} + \expval{\cos^2 {x}} = \expval{1} = 1 $ y como para el seno y coseno este valor esperado debe ser igual, entonces $\expval{\sin^2 {x}} = \expval{\cos^2 {x}} = \frac{1}{2}$; además, $\expval{\sin{x} \cos{x}} = 0$. Con esto, calculamos el valor esperado de la energía potencial
+	\begin{align*}
+		\expval{V} &= \frac{1}{2} u^2 \qty(1 - \cos{ka})^2 + \frac{1}{2} u^2 \sin^2 {ka} = u^2 \qty(1 - \cos{ka}).
+	\end{align*}
+	Integrando la relación de disperción dada en el intervalo de $0\to k$
+		$$ \omega ^2 = \int _0 ^k \frac{2Ca}{M} \sin{ka} \dd{k} = \frac{2C}{M} \qty(1 - \cos{ka}), $$
+	sustituyendo en el valor esperado de la energía potencial
+		$$ \expval{V} = \frac{1}{4} M\omega ^2 u^2. $$
+	Para la energía cinética, derivamos $u_s$ respecto al tiempo $\dot{u}_s = -u\omega \sin{\qty(\omega t - ska)}$, entonces
+	\begin{align*}
+		\expval{\dot{u}_s ^2} &= u^2 \omega ^2 \sin^2 {\qty(\omega t - ska)} = \frac{1}{2} u^2 \omega ^2 \\
+		\expval{T} &= \frac{1}{4} M\omega ^2 u^2,
+	\end{align*}
+entonces
+	$$ \expval{E} = \expval{T} + \expval{V} = \frac{1}{2} M\omega ^2 u^2 . $$
+\subsection{Problema 4}
+Dado que el potencial es continuo con infinitas derivadas, se cumple el teorema de taylor. En concreto, podemos escribir el potencial como una serie de Maclaurin (porque es alrededor del cero)
+	$$ V(r) = V(0) + \frac{V'(0)}{1!} r + \frac{V''(0)}{2!} r^2 \cdots , $$
+tomando $V(0) = V'(0) = 0$ y $r\ll 0$; de modo que
+	$$ V(r) = \frac{V''(0)}{2} r^2 . $$
+Donde el error esta dado por
+	$$ \text{Error} = \abs{\frac{V^{(n+1)} (\xi)}{(n + 1)!} r^{n + 1}}, $$
+con $\xi \in (0,r)$.
+
 %\section{Examen Final}
 %\label{sec:final}
 %
@@ -102,8 +208,11 @@ con el operador número definido como $N = a^\dagger a$.
 \bibliography{references}%
 
 \begin{thebibliography}{00}
-\bibitem{b1} R. Symon, \textit{Mechanics} 3a. Ed. Addison$-$Wesley Publishing Company, 1971
-\bibitem{b2} R. Taylor, \textit{Classical Mechanics}, Edwards Brothers, Inc. 2005.
+\bibitem{b1} Baake, M., \& Grimm, U. (2013). \textit{Aperiodic order (Vol. 1)}. Cambridge University Press.
+\bibitem{b2} McEuen, P., \& Kittel, C. (2005). \textit{Introduction to solid state physics.}
+\bibitem{b3} UNIVERSIDAD DEL PAÍS VASCO / EUSKAL HERRIKO UNIBERTSITATEA ESCUELA DE INGENIERÍA DE BILBAO / BILBOKO INGENIERITZA ESKOLA. (s/f). Ehu.eus. Recuperado el 26 de noviembre de 2022, de \url{https://ocw.ehu.eus/pluginfile.php/51169/mod_resource/content/0/Tema\%203-Estructura\%20cristalina.pdf}
+
+
 \end{thebibliography}
 
 \end{document}
