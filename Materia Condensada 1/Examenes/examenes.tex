@@ -29,7 +29,7 @@
 Solución:
 \begin{enumerate}[(a)]
 	\item Tomando un subonjunto propio finito ($\Lambda$) no vacío de puntos en un espacio $\R ^d$, la Celda de Voronoi para un punto $a\in \Lambda$ se define como
-		$$ V(a) := \{ x\in \R ^d :\norm{x - a} \leq \norm{x - b} \, \forall \, x\in \Lambda \} . $$
+		$$ V(a) := \{ x\in \R ^d :\norm{x - a} \leq \norm{x - b} \, \forall \, b\in \Lambda \} . $$
 	Donde la norma mostrada es la norma euclideana. Cada punto en $\Lambda$ tiene una Celda de Voronoi definida y esta es un polinomio. Las Celdas de Delone se forman con los elementos de $\Lambda$ como vértices. Explicado de otra forma para facilitar su visualización, los vértices de las celdas de Voronoi son los circuncentros de todas las Celdas de Delone que tienen como vértice común el punto $a$, esto para cualquier polinomio de celdas de Delone (en dos dimensiones, vease figura \ref{voronoi_delone}).
 		\begin{figure}[H]
 			\centering

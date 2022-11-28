@@ -1,0 +1,114 @@
+\begin{ejercicio}
+	Solución, expandiendo los operadores de momento angular y se utiliza la siguiente propiedad: $[AB,C] = A[B,C] + [A,C]B$.
+	\begin{itemize}
+		\item Demostrar $[L_x ,Y] = i\hbar Z$
+			\begin{align*}
+				&= [YP_z ,Y] - [ZP_y ,Y] \\
+				&= Y[P_z ,Y] + [Y,Y]P_z - Z[P_z ,Y] - [Z,Y]P_y \\
+				&= -Z[P_y ,Y] = -Z(-i\hbar) \\
+				&= i\hbar Z.
+			\end{align*}
+		\item Demostrar $[L_x ,P_y] = i\hbar P_z$
+			\begin{align*}
+				&= [YP_z ,P_y] - [ZP_y ,P_y] \\
+				&= Y[P_z ,P_y] + [Y,P_y]P_z \\
+				&= i\hbar P_z.
+			\end{align*}
+		\item Demostrar $[L_x ,P^2] = 0$
+			\begin{align*}
+				&= [L_x ,P_x ^2 + P_y ^2 + P_z ^2] \\
+				&= \underbrace{[YP_z,P_x ^2]}_{0} + \underbrace{[YP_z,P_y ^2]}_{2i\hbar P_y P_z} + \underbrace{[YP_z,P_z ^2]}_{0} - \underbrace{[ZP_y,P_x ^2]}_{0} - \underbrace{[ZP_y,P_y ^2]}_{0} - \underbrace{[ZP_y,P_z ^2]}_{2i\hbar P_z P_y} \\
+				&= 2i\hbar [P_y,P_z] = 0
+			\end{align*}
+	\end{itemize}
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}
+	Sabiendo que
+		$$ L^2 \ket{l,m} = \hbar ^2 l(l+1)\ket{k,m} $$
+		$$ L_z \ket{l,m} = \hbar m\ket{l,m}. $$
+	Ya se tiene la base propia, teniendo que $m\in [-l,l]$ entonces GRAFICA!
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[scale=0.5]{img/proper_basis.png}
+%		\caption{Base Propia de $L^2$.}
+%		\label{properbasis}
+%	\end{figure}
+	Además, se tiene que 
+		\begin{align*}
+			L_+ \ket{l,m} &= C_+ \ket{l,m} \\
+			L_- \ket{l,m} &= C_- \ket{l,m},
+		\end{align*}
+	cuyas constantes (según Zettili) son
+		\begin{align*}
+			C_\pm &= \hbar \sqrt{l(l + 1) - m(m \pm 1)}.
+		\end{align*}
+	Encontrando las representaciones matriciales ($m' \neq m$ y $l = l' = 1$) $\mel{l,m}{\hat{A}}{l',m'}$
+		\begin{align*}
+			\mel{1,0}{L_-}{1,1} &= \sqrt{2} \hbar \\
+			\mel{1,-1}{L_-}{1,0} &= \sqrt{2} \hbar \\
+			L_- &= \frac{\hbar}{\sqrt{2}} \mqty(0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 1 & 0)
+		\end{align*}
+	el resto son cero.
+		\begin{align*}
+			\mel{1,1}{L_+}{1,0} &= \sqrt{2} \hbar \\
+			\mel{1,0}{L_+}{1,-1} &= \sqrt{2} \hbar \\
+			L_+ &= \frac{\hbar}{\sqrt{2}} \mqty(0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0),
+		\end{align*}
+	$L_z$ es más claro por su definición
+\begin{align*}
+			\mel{1,1}{L_z}{1,1} &= \hbar \\
+			\mel{1,0}{L_z}{1,0} &= 0 \\
+			\mel{1,-1}{L_z}{1,-1} &= -\hbar \\
+			L_z &= \hbar \mqty(1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1).
+		\end{align*}
+	Teniendo la relación entre los operadores escalera y $L_y$ y $L_x$
+		$$ L_x = \frac{1}{2} \qty(L_+ + L_-), $$
+		$$ L_y = \frac{i}{2} \qty(L_- - L_+). $$
+	Reemplazando y sumando las matrices, se tiene
+		$$ L_x = \frac{\hbar}{2\sqrt{2}} \mqty(0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0), $$
+		$$ L_y = \frac{\hbar}{2\sqrt{2}} \mqty(0 & -1 & 0 \\ 1 & 0 & -1 \\ 0 & 1 & 0). $$
+	Y $L^2 = L_x ^2 + L_y ^2 + L_z ^2$, utilizando mathematica
+		$$ L^2 = \frac{\hbar ^2}{4} \mqty(5 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 4). $$
+\end{ejercicio}
+
+
+
+
+
+
+\begin{ejercicio}
+	
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%
