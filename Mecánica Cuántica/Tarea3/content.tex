@@ -34,7 +34,22 @@
 
 
 \begin{ejercicio}
-	
+	Sabiendo que $L_z = -i\hbar \pdv{\phi}$, entonces, aplicando el conmutador a un vector cualquiera, se tiene
+	\begin{align*}
+		[L_z ,\cos{\phi} I] f &= -i\hbar \pdv{\phi} \qty(\cos{\phi} f) - \cos{\phi} \qty(-\hbar \pdv{\phi} f) \\
+		&= i\hbar \sin{\phi} f - i\hbar \cos{\phi} \pdv{f}{\phi} + i\hbar \cos{\phi} \pdv{f}{\phi} \\
+		&= i\hbar \sin{\phi} f;
+	\end{align*}
+	por ende, 
+	$$ [L_z ,\cos{\phi} I] = i\hbar \sin{\phi}. $$
+	Para $[L_z ,\sin{2\phi} I]$, realizamos exactamente lo mismo
+	\begin{align*}
+		[L_z ,\sin{2\phi} I] f &= -i\hbar \pdv{\phi} \qty(\sin{2\phi} f) - \sin{2\phi} \qty(-\hbar \pdv{\phi} f) \\
+		&= -i\hbar 2\underbrace{\cos{2\phi}}_{\cos ^2 {\phi} - \sin ^2 {\phi}} f - i\hbar \sin{2\phi} \pdv{f}{\phi} + i\hbar \sin{2\phi} \pdv{f}{\phi} \\
+		&= 2i\hbar \qty(\sin ^2 {\phi} - \cos ^2 {\phi}) f;
+	\end{align*}
+	entonces,
+	$$ [L_z ,\sin{2\phi} I] = 2i\hbar \qty(\sin ^2 {\phi} - \cos ^2 {\phi}). $$
 \end{ejercicio}
 
 
@@ -95,9 +110,57 @@
 
 
 \begin{ejercicio}
-	
+	Sabiendo que los operadores se pueden escribir en términos del los operadores escalera
+		\begin{align*}
+			L_x &= \frac{1}{2} \qty(L_+ + L_-) \\
+			L_y &= \frac{1}{2} \qty(L_- - L_+),
+		\end{align*}
+	Entonces, es claro que $\expval{L_x} = 0$ dado que $\expval{L_+} = \expval{L_-} = 0$. Ahora $L_x ^2 = \frac{1}{4} \qty(L_+ ^2 + L_+ L_- + L_- L_+ + L_- ^2)$, por lo anterior $\expval{L_+ ^2} = \expval{L_- ^2} = 0$, entonces
+		$$ \expval{L_x ^2} = \frac{1}{4} \expval{L_+ L_- + L_- L_+}, $$
+		$$ \expval{L_y ^2} = -\frac{1}{4} \expval{-L_+ L_- - L_- L_+}, $$
+	lo que implica que $\expval{L_x ^2} = \expval{L_y ^2}$. Calculando su valor, tomamos la relación $\expval{L_x ^2} = \expval{L_y ^2} = \frac{1}{2} \qty[\expval{L^2} - \expval{L_z ^2}]$, entonces
+		$$ \expval{L_x ^2} = \expval{L_y ^2} = \frac{\hbar ^2}{2} \qty[l(l + 1) - m^2]. $$
+	Es claro que $l(l + 1) - m^2 \geq m(m + 1) - m^2 = m$, por ende
+		$$ \Delta L_x \Delta L_y = \sqrt{\expval{L_x ^2} \expval{L_y ^2}} \geq \frac{1}{2} \hbar ^2 m. $$
 \end{ejercicio}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ejercicio}
+	Solución
+	\begin{itemize}
+		\item Para $J_+$, partimos de
+			\begin{align*}
+				J_z J_+ \ket{j,m} &= \qty(J_z J_+ - J_+ J_z + J_+ J_z) \ket{j,m} \\
+				&= \qty([J_z ,J_+] + J_+ J_z) \ket{j,m} \\
+				&= \hbar J_+ \ket{j,m} + \hbar m J_+ \ket{j,m} \\
+				&= \hbar (m + 1) J_+ \ket{j,m},
+			\end{align*}
+		lo que implica que $J_+ \ket{j,m}$ es vector propio de $J_z$, por lo que
+			$$ J_+ \ket{j,m} = C\ket{j,m + 1}. $$
+		\item Para $J_-$, se tiene que
+			\begin{align*}
+				J_z J_- \ket{j,m} &= \qty(J_z J_- - J_- J_z + J_- J_z) \ket{j,m} \\
+				&= \qty([J_z ,J_-] + J_- J_z) \ket{j,m} \\
+				&= -\hbar J_- \ket{j,m} + \hbar m J_- \ket{j,m} \\
+				&= \hbar (m - 1) J_- \ket{j,m},
+			\end{align*}
+		lo que implica que $J_- \ket{j,m}$ es vector propio de $J_z$, por lo que
+			$$ J_- \ket{j,m} = C\ket{j,m - 1}. $$
+	\end{itemize}
+\end{ejercicio}
 
 
 
