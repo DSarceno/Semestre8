@@ -27,7 +27,42 @@
 
 
 \begin{ejercicio}
+	Para $j=\flatfrac{3}{2}$ se tienen los posibles valores de $m = -\flatfrac{3}{2},-\flatfrac{1}{2},\flatfrac{1}{2},\flatfrac{3}{2}$. Y los ángulos de interes son $\theta _1 = \arccos{\frac{\flatfrac{3}{2}}{\flatfrac{\sqrt{15}}{2}}} = 39.2^o$ y $\theta _2 = \arccos{\frac{\flatfrac{1}{2}}{\flatfrac{\sqrt{15}}{2}}} = 75^o$. 
 	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{img/ej2.jpeg}
+		\caption{Representación de los kets propios de $J^2$.}
+		\label{ej2}
+	\end{figure}		
+	
+	También, dados los kets propios de $J^2$ y $J_z$, se tienen las entradas
+
+		{\begin{align*}
+			\begin{split}
+			J^2 \ket{\frac{3}{2},-\frac{3}{2}} &= \frac{15}{4} \hbar ^2 \ket{\frac{3}{2},-\frac{3}{2}}, \\
+			J^2 \ket{\frac{3}{2},-\frac{1}{2}} &= \frac{15}{4} \hbar ^2 \ket{\frac{3}{2},-\frac{1}{2}}, \\
+			J^2 \ket{\frac{3}{2},\frac{1}{2}} &= \frac{15}{4} \hbar ^2 \ket{\frac{3}{2},\frac{1}{2}}, \\
+			J^2 \ket{\frac{3}{2},\frac{3}{2}} &= \frac{15}{4} \hbar ^2 \ket{\frac{3}{2},\frac{3}{2}}. \\
+			\end{split}
+			&&
+			\begin{split}
+			J_z \ket{\frac{3}{2},-\frac{3}{2}} &= -\frac{3}{2} \hbar \ket{\frac{3}{2},-\frac{3}{2}}, \\
+			J_z \ket{\frac{3}{2},-\frac{1}{2}} &= -\frac{1}{2} \hbar \ket{\frac{3}{2},-\frac{1}{2}}, \\
+			J_z \ket{\frac{3}{2},\frac{1}{2}} &= \frac{1}{2} \hbar \ket{\frac{3}{2},\frac{1}{2}}, \\
+			J_z \ket{\frac{3}{2},\frac{3}{2}} &= \frac{3}{2} \hbar \ket{\frac{3}{2},\frac{3}{2}}. \\
+			\end{split}
+		\end{align*}}
+
+	Con esto, sus respectivas representaciones matriciales es
+	$$ J^2 = \frac{15}{4} \hbar ^2 \mqty(1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1), $$
+	$$ J_z = \frac{1}{2} \hbar \mqty(3 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -3). $$
+	Ahora, para los operadores escaleras, se sabe que $J_\pm \ket{j,m} = \hbar\sqrt{j(j+1)-m(m\pm 1)} \ket{j,m+1}$. De la misma forma se construye la matriz para $J_+$ y para $J_- = J_+ ^\dagger$. Entonces
+	$$ J_+ = \hbar \mqty(0 & 0 & 0 & 0 \\ \sqrt{3} & 0 & 0 & 0 \\ 0 & 2 & 0 & 0 \\ 0 & 0 & \sqrt{3} & 0), $$
+	$$ J_- = \hbar \mqty(0 & \sqrt{3} & 0 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & \sqrt{3} \\ 0 & 0 & 0 & 0). $$
+	Teniendo las relaciones $J_x = \frac{1}{2} (J_+ + J_-)$ y $J_y = \frac{-i}{2} (J_+ - J_-)$, por lo que
+	$$ J_x = \frac{\hbar}{2} \mqty(0 & \sqrt{3} & 0 & 0 \\ \sqrt{3} & 0 & 2 & 0 \\ 0 & 2 & 0 & \sqrt{3} \\ 0 & 0 & \sqrt{3} & 0), $$
+	$$ J_y = -\frac{i\hbar}{2} \mqty(0 & -\sqrt{3} & 0 & 0 \\ \sqrt{3} & 0 & -2 & 0 \\ 0 & 2 & 0 & -\sqrt{3} \\ 0 & 0 & \sqrt{3} & 0). $$
 \end{ejercicio}
 
 
