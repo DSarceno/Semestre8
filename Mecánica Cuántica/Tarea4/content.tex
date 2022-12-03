@@ -1,0 +1,109 @@
+
+
+
+
+\begin{ejercicio}
+	Sabiendo que los operadores se pueden escribir en términos del los operadores escalera
+		\begin{align*}
+			L_x &= \frac{1}{2} \qty(L_+ + L_-) \\
+			L_y &= \frac{1}{2} \qty(L_- - L_+),
+		\end{align*}
+	Entonces, es claro que $\expval{L_x} = 0$ dado que $\expval{L_+} = \expval{L_-} = 0$. Ahora $L_x ^2 = \frac{1}{4} \qty(L_+ ^2 + L_+ L_- + L_- L_+ + L_- ^2)$, por lo anterior $\expval{L_+ ^2} = \expval{L_- ^2} = 0$, entonces
+		$$ \expval{L_x ^2} = \frac{1}{4} \expval{L_+ L_- + L_- L_+}, $$
+		$$ \expval{L_y ^2} = -\frac{1}{4} \expval{-L_+ L_- - L_- L_+}, $$
+	lo que implica que $\expval{L_x ^2} = \expval{L_y ^2}$. Calculando su valor, tomamos la relación $\expval{L_x ^2} = \expval{L_y ^2} = \frac{1}{2} \qty[\expval{L^2} - \expval{L_z ^2}]$, entonces
+		$$ \expval{L_x ^2} = \expval{L_y ^2} = \frac{\hbar ^2}{2} \qty[l(l + 1) - m^2]. $$
+
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ejercicio}
+	Partiendo de la definición de los operadores
+		\begin{align*}
+			L_x &= i\hbar \qty(Z\pdv{y} - Y\pdv{z}) \\
+			L_y &= i\hbar \qty(X\pdv{z} - Z\pdv{x}) \\
+			L_z &= i\hbar \qty(Y\pdv{x} - X\pdv{y}).
+		\end{align*}
+	Utilizando la regla de la cadena y trasladando a coordenadas esfericas
+		{\begin{align*}
+			\begin{split}
+				\pdv{r}{x} &= \sen{\theta} \cos{\phi} \\
+				\pdv{r}{y} &= \sen{\theta} \sin{\phi} \\
+				\pdv{r}{z} &= \cos{\theta} \\
+			\end{split}
+			&&
+			\begin{split}
+				\pdv{\theta}{x} &= \frac{1}{r} \cos{\theta} \cos{\phi} \\
+				\pdv{\theta}{y} &= \frac{1}{r} \cos{\theta} \sin{\phi} \\
+				\pdv{\theta}{z} &= -\frac{1}{r} \sin{\theta} \\
+			\end{split}
+			&&
+			\begin{split}
+				\pdv{\phi}{x} &= -\frac{1}{r} \frac{\sin{\phi}}{\sin{\theta}} \\
+				\pdv{\phi}{y} &= \frac{1}{r} \frac{\cos{\phi}}{\sin{\theta}} \\
+				\pdv{\phi}{z} &= 0. \\
+			\end{split}
+		\end{align*}}
+		
+	reemplazando en la definición de los operadores junto con la regla de la cadena. Por lo tanto, se tiene
+	\begin{align*}
+		L_x = i\hbar \qty(\sin{\phi} \pdv{\theta} + \cot{\theta} \cos{\phi} \pdv{\phi}),
+	\end{align*}
+	lo mismo para $y$
+	\begin{align*}
+		L_y = i\hbar \qty(-\cos{\phi} \pdv{\theta} + \cot{\theta} \sin{\phi} \pdv{\phi})
+	\end{align*}
+	y
+	\begin{align*}
+		L_z = -i\hbar \pdv{\phi}.
+	\end{align*}
+	Ahora, encontrando el cuadrado de cada componente, se tiene
+		\begin{align*}
+			L_x ^2 &= -\hbar ^2 \qty(\sin{\phi} \pdv{\theta} + \cot{\theta} \cos{\phi} \pdv{\phi}) \qty(\sin{\phi} \pdv{\theta} + \cot{\theta} \cos{\phi} \pdv{\phi}), \\
+			L_y ^2 &= -\hbar ^2 \qty(-\cos{\phi} \pdv{\theta} + \cot{\theta} \sin{\phi} \pdv{\phi}) \qty(-\cos{\phi} \pdv{\theta} + \cot{\theta} \sin{\phi} \pdv{\phi}), \\
+			L_z ^2 &= -\hbar ^2 \pdv[2]{\phi}.
+		\end{align*}
+	Luego de un poco de álgebra, se llega a 
+		$$ L^2 = -\hbar ^2 \qty[\frac{1}{\sin{\theta}} \pdv{\theta} \qty(\sin{\theta} \pdv{\theta}) + \frac{1}{\sin ^2 {\theta}} \pdv[2]{\phi}]. $$
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ejercicio}
+	
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%
