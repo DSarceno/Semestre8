@@ -92,9 +92,100 @@
 
 
 \begin{ejercicio}
+	Solución:
+	\begin{enumerate}[a)]
+		\item 
+		\item Sabemos que $\braket{r,\theta ,\phi}{l,m}$, lo podemos escribir en términos de los armónicos esféricos $Y^m _l$. Estos los encontramos resolviendo la ecuación $L^2 \psi = \lambda \psi$ por separación de variables. Las soluciones resultan $\Theta (\theta) = P^m _l (\cos{\theta})$ y $\Phi (\phi) = e^{im\phi}$. Por propiedades de los polinomios de Legendre, la constante de normalización  es $C_{lm} = (-1)^m \sqrt{\qty(\frac{2l+1}{2}) \frac{(l-m)!}{(l+m)!}}$ y la de $\Psi$ es $\frac{1}{2\pi}$. Entonces, los armónicos esféricos se pueden escribir como
+			$$ \braket{r,\theta ,\phi}{l,m} = Y_l ^m (\theta ,\phi) = (-1)^m \sqrt{\frac{(2l + 1) (l-m)!}{4\pi (l + m)!}} P^m _l (\cos{\theta}) e^{im\phi}. $$
+		\item Con el inciso anterior calculamos $\braket{r,\theta ,\phi}{2,1}$ y $\braket{r,\theta ,\phi}{2,2}$ únicamente valuando $l,m$ en $Y^m _l$. Entonces (utilizando la tabla $5.1$ y $5.2$ de Zettili.)
+		\begin{align*}
+			\braket{r,\theta ,\phi}{2,1} &= Y_2 ^1 (\theta ,\phi) = -\sqrt{\frac{15}{8\pi}} e^{i\phi} \sin{\theta} \cos{\theta} , \\
+			\braket{r,\theta ,\phi}{2,2} &= Y_2 ^2 (\theta ,\phi) = \sqrt{\frac{15}{32\pi}} e^{2i\phi} \sin ^2 {\theta} .
+		\end{align*}
+	\end{enumerate}
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ejercicio}
 	
 \end{ejercicio}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ejercicio}
+	Sabiendo que
+		$$ \ket{1,1} = \mqty(1 \\ 0 \\ 0), \qquad \qquad \ket{1,0} = \mqty(0 \\ 1 \\ 0), \qquad \qquad \ket{1,-1} = \mqty(0 \\ 0 \\ 1). $$
+	Utilizando la función \texttt{Norm[]} y \texttt{Solve[]} se encuentra la constante de normalización la cuál es $A = \pm \frac{2}{\sqrt{7}}$. Con esto y por lo encontrado la tarea pasada, $\expval{L_x} = \expval{L_y} = 0$. Ahora, para los otros dos operadores
+	\begin{align*}
+		\expval{L_z}{\psi} &= -\frac{\hbar}{7} + \hbar \frac{2}{7} = \frac{\hbar}{7}, \\
+		\expval{L^2}{\psi} &= \frac{2\hbar ^2}{7} + \frac{4}{7} \qty(2\hbar ^2) + \frac{2}{7} (2\hbar ^2) = 2\hbar ^2 .
+	\end{align*}
+\end{ejercicio}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ejercicio}
+	Dadas las relaciones
+	$$ [J_x,J_y] = i\hbar J_z, \qquad \qquad [J_y,J_z] = i\hbar J_x, \qquad \qquad [J_z,J_x] = i\hbar J_y. $$
+	Utilizando la propiedad $[AB,C] = A[B,C] + [A,C]B$, se pueden expandir los términos del lado izquierdo de la igualdad
+	\begin{align*}
+		[J_x J_y,J_z] &= i\hbar J_x ^2 - i\hbar J_y ^2, \\
+		[J_x,J_y J_z] &= -i\hbar J_y ^2 + i\hbar J_z ,
+	\end{align*}
+	sumando y factorizando
+	$$ = i\hbar \qty(J_x ^2 - 2J_y ^2 + J_z ^2). $$
+	Concluyendo la demostración.
+\end{ejercicio}
 
 
 
