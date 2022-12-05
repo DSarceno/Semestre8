@@ -21,12 +21,11 @@
 
 
 
-\section{Parcial 1}
+\section*{Parcial 1}
 \label{sec:parcial1}
 %\justify 
 	
-\subsection{Problema 1}
-Solución:
+\subsection*{Problema 1}
 \begin{enumerate}[(a)]
 	\item Tomando un subonjunto propio finito ($\Lambda$) no vacío de puntos en un espacio $\R ^d$, la Celda de Voronoi para un punto $a\in \Lambda$ se define como
 		$$ V(a) := \{ x\in \R ^d :\norm{x - a} \leq \norm{x - b} \, \forall \, b\in \Lambda \} . $$
@@ -45,7 +44,7 @@ Solución:
 			\label{wigner-seitz}
 		\end{figure}
 	Mientras que la Primera Zona de Brillouin es la Celda de Wigner$-$Seitz en la red recíproca.
-	\item 
+	\item Para una red unidimencional, el conjunto de vectores de la base de la red $\Gamma$ es de un único elemento. Por ende, la red unidimencional funciona como una recta numérica discreta, accediendo a todos los elementos de dicha recta mediante los valores de $m \in \mathbb{Z}$.
 	\item Para los planos $(111)$, $(110)$ se tiene la siguiente figura (primera y última imagen)
 		\begin{figure}[H]
 			\centering
@@ -103,8 +102,15 @@ Solución:
 	\item 
 \end{enumerate}
 
-\subsection{Problema 2}
-\subsection{Problema 3}
+\subsection*{Problema 2}
+\begin{enumerate}[a)]
+	\item En el enunciado se expresa que cada par de vectores pertenecen a un plano distinto, por ende son linealmente intependientes en sus planos y en general. Dado esto, representan una base y como son los vecinos más proximos, representan el conjunto de vectores primitivos de la red.
+	\item Sabemos que los vectores no coplanares cumplen con la siguiente propiedad: $\abs{(\vu{a}_1 \cp \vu{a}_2) \cdot \vu{a}_3} = 0$. Si los vectores son no coplanares son linealmente independientes; por ende, si el número de elementos de la lista es igual a la dimensión del espacio (como se muestra en el Parcial 1, problema 1c), representa una red de bravais. Y como estamos en espacios vectoriales, la cerradura bajo la suma es hereditaria.
+\end{enumerate}
+
+
+
+\subsection*{Problema 3}
 Según el libro \cite{b1}, el factor de forma atómica, lo podemos escribir como	
 	$$ f(k) = \frac{4\pi}{e} \int \dd{r} r^2 \rho (r) \frac{\sin{kr}}{kr}, $$
 reemplazando $\rho (r) = \frac{1}{\pi a_o ^3} e^{\flatfrac{-2r}{a_o}}$ se tiene
@@ -112,10 +118,10 @@ reemplazando $\rho (r) = \frac{1}{\pi a_o ^3} e^{\flatfrac{-2r}{a_o}}$ se tiene
 
 
 
-\section{Parcial 2}
+\section*{Parcial 2}
 \label{sec:parcial2}
 
-\subsection{Problema 1}
+\subsection*{Problema 1}
 Para el oscilador armónico cuántico se tiene el hamiltoniano
 \begin{equation}
 	H = \frac{p^2}{2m} + \frac{1}{2} m\omega ^2 q^2 , \label{hamilQAO}
@@ -143,10 +149,10 @@ con el operador número definido como $N = a^\dagger a$.
 
 
 
-\subsection{Problema 2}
+\subsection*{Problema 2}
 
 
-\subsection{Problema 3}
+\subsection*{Problema 3}
 La energía cinética individual está dada como $\frac{1}{2} M \dot{u}_s ^2$, y la fuerza entre los átomos contiguos de la red tiene la forma de la ley de Hooke $-C (u_s - u_{s + 1})$ (solo tomando el estiramiento). Su potencial esta dado por $\frac{1}{2} C (u_s - u_{s + 1})^2$, esto se extiende a toda la red. Con esto, la energía total esta dada por
 	$$ E = \frac{1}{2} M \dot{u}_s ^2 + \frac{1}{2} C (u_s - u_{s + 1})^2. $$
 Para encontrar la energía potencial y cinética promediada en el tiempo partimos de sustituir en la energía potencial la función $u_s$, entonces se tiene
@@ -171,7 +177,7 @@ Para encontrar la energía potencial y cinética promediada en el tiempo partimo
 	\end{align*}
 entonces
 	$$ \expval{E} = \expval{T} + \expval{V} = \frac{1}{2} M\omega ^2 u^2 . $$
-\subsection{Problema 4}
+\subsection*{Problema 4}
 Dado que el potencial es continuo con infinitas derivadas, se cumple el teorema de taylor. En concreto, podemos escribir el potencial como una serie de Maclaurin (porque es alrededor del cero)
 	$$ V(r) = V(0) + \frac{V'(0)}{1!} r + \frac{V''(0)}{2!} r^2 \cdots , $$
 tomando $V(0) = V'(0) = 0$ y $r\ll 0$; de modo que
@@ -180,19 +186,35 @@ Donde el error esta dado por
 	$$ \text{Error} = \abs{\frac{V^{(n+1)} (\xi)}{(n + 1)!} r^{n + 1}}, $$
 con $\xi \in (0,r)$.
 
-%\section{Examen Final}
-%\label{sec:final}
-%
-%\subsection{Problema 1}
-%
-%
-%
-%\subsection{Problema 2}
-%
-%
-%
-%
-%\subsection{Problema 3}
+\section*{Examen Final}
+\label{sec:final}
+
+\subsection*{Problema 1}
+
+
+
+\subsection*{Problema 2}
+En el modelo de Drude, la probabilidad de que un electrón colisione en un intervalo infinitesimal de tiempo $\dd{t}$ está dada por $\frac{\dd{t}}{\tau}$, donde $\tau$ es el intervalo de relajación.
+\begin{enumerate}
+	\item Primero, tomaremos un intervalo $\Delta t$ de la forma $\Delta = \frac{t}{N}$, teniendo en cuenta que $\lim _{N \to \infty} \Delta t = \dd{t}$. Entonces, para la partícula no colisiona con una probabilidad $1 - \flatfrac{\Delta t}{\tau}$; por lo tanto, la probabilidad de no colisionar en un intervalo $[0,t]$ esta dado por el producto de las $N$ probabilidades independientes, i.e.
+		$$ p(t) = \qty(1 - \frac{\Delta t}{\tau}) \cdots \qty(1 - \frac{\Delta t}{\tau}) = \qty(1 - \frac{\Delta t}{\tau})^N, $$
+		reemplazando $\Delta t$ y tomando el límite cuando $N\to \infty$
+		$$ p(t) = \lim _{N = \infty} \qty(1 - \frac{\flatfrac{t}{\tau}}{N})^N = e^{-\flatfrac{t}{\tau}}. $$
+	\item 
+	\item Para esto, podemos tomar la probabilidad de que un electrón cualquiera no colisione en un intervalo $[0,t]$ y luego la de colisionar en el siguiente intervalo $\dd{t}$, por ende la probabilidad total es el producto de ambas
+		$$ = \qty(\frac{\dd{t}}{\tau}) e^{-\frac{t}{\tau}}.$$
+	\item El tiempo medio lo podemos encontrar de la siguiente forma
+		$$ \expval{t} = \frac{1}{\tau} \int _0 ^\infty tp(t) \dd{t} $$
+		Utilizando la siguiente línea de \textit{Mathematica}: \texttt{Integrate[1/a*t*Exp[-t/a], {t, 0, Infinity}]}, se tiene que
+			$$ \expval{t} = \tau . $$
+	\item Por lo mismo realizado en el inciso anterior, el tiempo medio entre las colisiones es exactamente el mismo que el tiempo medio desde la útlima colision, $\tau$.
+	\item 
+\end{enumerate}
+
+
+
+
+\subsection*{Problema 3}
 
 
 
@@ -210,7 +232,10 @@ con $\xi \in (0,r)$.
 \begin{thebibliography}{00}
 \bibitem{b1} Baake, M., \& Grimm, U. (2013). \textit{Aperiodic order (Vol. 1)}. Cambridge University Press.
 \bibitem{b2} McEuen, P., \& Kittel, C. (2005). \textit{Introduction to solid state physics.}
-\bibitem{b3} UNIVERSIDAD DEL PAÍS VASCO / EUSKAL HERRIKO UNIBERTSITATEA ESCUELA DE INGENIERÍA DE BILBAO / BILBOKO INGENIERITZA ESKOLA. (s/f). Ehu.eus. Recuperado el 26 de noviembre de 2022, de \url{https://ocw.ehu.eus/pluginfile.php/51169/mod_resource/content/0/Tema\%203-Estructura\%20cristalina.pdf}
+\bibitem{b3} Ashcroft, N. W. (1976). \textit{Solid State Physics} (HR\&W) Google Scholar NW Ashcroft and ND Mermin 1979. Solid State Physics, 1, 2.
+\bibitem{b4} Baake, M., \& Grimm, U. (2013). \textit{Aperiodic order} (Vol. 1). Cambridge University Press.
+\bibitem{b5} Anderson, P. W. (1984). \textit{Basic notions of condensed matter physics.} Frontiers in physics, 55, 49.
+\bibitem{b6} UNIVERSIDAD DEL PAÍS VASCO / EUSKAL HERRIKO UNIBERTSITATEA ESCUELA DE INGENIERÍA DE BILBAO / BILBOKO INGENIERITZA ESKOLA. (s/f). Ehu.eus. Recuperado el 26 de noviembre de 2022, de \url{https://ocw.ehu.eus/pluginfile.php/51169/mod_resource/content/0/Tema\%203-Estructura\%20cristalina.pdf}
 
 
 \end{thebibliography}
