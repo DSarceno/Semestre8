@@ -119,7 +119,17 @@
 
 
 \begin{ejercicio}
-	
+	Tomando cada uno de los respectivos operadores en términos de las matrices de Pauli
+		$$ S^2 = \frac{\hbar ^2}{4} \qty( \pauli{x}^2 + \pauli{y}^2 + \pauli{z}^2 ). $$
+	En forma matricial es
+		$$ S^2 = \frac{3\hbar ^2}{4} \mqty(1 & 0 \\ 0 & 1). $$	
+	\begin{enumerate}[a)]
+		\item Encontrando $S^2 \boxplus S^2$, planteamos el producto $S^2 \otimes I_2 + I_2 \otimes S^2$, luego de resolverlo en \textit{Mathematica}
+			$$ S^2 \boxplus S^2 = \frac{3\hbar ^2}{2} I_4. $$
+		\item Los valores y vectores propios, dado que es una identidad, los vectores propios son la base canónica
+			$$ \qty\Bigg{ \mqty(1 \\ 0 \\ 0 \\ 0), \mqty(0 \\ 1 \\ 0 \\ 0), \mqty(0 \\ 0 \\ 1 \\ 0), \mqty(0 \\ 0 \\ 0 \\ 1) }, $$
+		con valor propio $\frac{3\hbar ^2}{2}$ para todos los vectores propios.
+	\end{enumerate}
 \end{ejercicio}
 
 

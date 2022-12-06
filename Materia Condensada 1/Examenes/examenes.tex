@@ -216,9 +216,13 @@ En el modelo de Drude, la probabilidad de que un electrón colisione en un inter
 
 \subsection*{Problema 3}
 
+En la teoría cuántica del sólido armónico encontramos que el calor específico\footnote{Ecuación extraída de \cite{b3}.} no es una constante, que está dado por una sumatoria sobre los vectores de onda
+	\begin{equation}
+		c_v = \frac{1}{V} \sum_{k} \pdv{T} \frac{\hbar \omega _s (k)}{e^{\beta \hbar \omega _s (k)} - 1}, \label{calor_especifico}
+	\end{equation}
+la que claramente depende del espectro de frecuencias de los modos normales. \\
 
-
-
+En el caso de que la relación $\flatfrac{k_B T}{\hbar}$ es muy grande comparada con las frecuencias de los fonones, el denominador de \eqref{calor_especifico} se puede expandir por medio de series de Taylor y realizando la sumatoria, llegamos a la ecuación clásica conocida $c_v = \flatfrac{3Nk_B}{V}$.
 
 %\section*{Agradecimientos}
 %\label{sec:agradecimientos}
