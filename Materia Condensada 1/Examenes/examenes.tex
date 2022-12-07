@@ -150,6 +150,28 @@ con el operador número definido como $N = a^\dagger a$.
 
 
 \subsection*{Problema 2}
+El estudio de los fonones abarca una parte importante en la física de estado sólido. Los fonones son una versión mecano-cuántica de los modos normales, es decir, es una onda que se propaga por la red de un cristal, la cuál puede describirse bajo la idea de un paquete de energía (cuánto). \\
+
+Para el desarrollo posterior, se utilizará una red bidimensional con planos paralelos que permiten ondas longitudinales o transversales. Asumiremos que la fuerza en el plano $s$ causada por el desplazamiento del plano $s + p$ es proporcional a la diferencia de sus desplazamientos. Tomaremos únicamente los primeros vecinos, i.e. $p = \pm 1$. Entonces la ecuación de movimiento es
+\begin{equation}
+	F_s = M \ddot{u}_s = C (u_{s + 1} - u_s) + C(u_{s - 1} - u_s) = C\qty(u_{s + 1} + u_{s - 1} - 2u_s ), \label{eq_movimiento_phonons}
+\end{equation}
+con $C$ es la constante de fuerza. Nos enfocaremos en soluciones relacionadas con un oscilador armónico, es decir
+	$$ -M \omega ^2u_s = C\qty(u_{s + 1} + u_{s - 1} - 2u_s ). $$
+Con esta relación, podemos plantear que las soluciones en $u_{s \pm 1}$ en términos de la separación entre planos y del vector de onda
+	$$ u_{s \pm 1} = ue^{isKa} e^{\pm iKa}. $$
+Sustituyendo lo anterior en \ref{eq_movimiento_phonons} y simplificando, se llega a la relación de dispersión $\omega (K)$
+	$$ \omega ^2 = \frac{2C}{M} \qty(1 - \cos{Ka}). $$
+Para lo cuál, la primera zona de Brillouin está en $-\flatfrac{\pi}{a} \leq K \leq \flatfrac{\pi}{a}$ y
+	$$ \dv{\omega}{K} = \frac{2Ca}{M}\sin{Ka} = 0, $$
+con esto, se redujo el problema a uno de osciladores donde sus celdas interactuan con sus primeros vecinos. 
+\vspace{0.5cm}
+
+Como se mencionó al inicio, los fonones son una cuantización de los modos normales, entonces la energía está dada como
+	$$ E_n = \qty(n + \frac{1}{2}) \hbar \omega . $$
+En la cuál, la energía base es $\frac{1}{2} \hbar \omega$, esto es equivalente tanto para fotones como para phonones, dada su relación con el oscilador armónico. La cuantización del fonón surge al cambiar las variables clásicas por su respectiva variable cuántica, como en el hamiltoniano\footnote{ecuación extraída del Apéndice C de \cite{b2}.}
+	$$ H = \sum _{s = 1} ^n \qty[\frac{1}{2M} p_s ^2 + \frac{1}{2} C \qty(q_{s + 1} - q_s)^2]. $$
+Aunque los fonones pueden interactuar con fotones, neutrones, electrones, etc. estos no tienen una cantidad de momento física. Dado esto, nos quedamos con la forma del hamiltoniano y la respectiva forma de la energía cuantizada del fonón.
 
 
 \subsection*{Problema 3}
@@ -222,8 +244,17 @@ En la teoría cuántica del sólido armónico encontramos que el calor específi
 	\end{equation}
 la que claramente depende del espectro de frecuencias de los modos normales. \\
 
-En el caso de que la relación $\flatfrac{k_B T}{\hbar}$ es muy grande comparada con las frecuencias de los fonones, el denominador de \eqref{calor_especifico} se puede expandir por medio de series de Taylor y realizando la sumatoria, llegamos a la ecuación clásica conocida $c_v = \flatfrac{3Nk_B}{V}$.
+En el caso de que la relación $\flatfrac{k_B T}{\hbar}$ es muy grande comparada con las frecuencias de los fonones, el denominador de \eqref{calor_especifico} se puede expandir por medio de series de Taylor y realizando la sumatoria, llegamos a la ecuación clásica conocida $c_v = \flatfrac{3Nk_B}{V}$ (Ley de Dulong$-$Petit). Si llamamos $c_v ^o$ al calor especifico dado por dicha ley, entonces
+	$$ c_v = c_v ^o \Delta c_v; $$
+por lo tanto, 
+	$$ \frac{\Delta c_v}{c_v ^o} = -\frac{\hbar ^2}{12 (k_B T)^2 *3N} \sum \omega _s (k)^2. $$
+Para temperaturas lo suficientemente altas, las correcciones a lo clásico empiezan a ser significantes. \\
 
+Para bajas temperaturas, se estudia el límite en un cristal grande, para el cuál la suma en \eqref{calor_especifico} se vuelve densa en la escala para sustituirla por una integral. (Para todo par de vectores que cumplan las condiciones de frontera de Born-von Karman)
+\begin{equation}
+	c_v = \pdv{T} \sum _s \int \frac{\dd{k}}{(2\pi)^3} \frac{\hbar \omega _s (k)}{e^{\hbar \omega _s (k) / k_B T} - 1}, \label{calor_especifico_integral}
+\end{equation}
+donde la integral debe ser tomada en la primera zona de Brillouin.
 %\section*{Agradecimientos}
 %\label{sec:agradecimientos}
 
